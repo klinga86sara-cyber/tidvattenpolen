@@ -1,5 +1,5 @@
-const CACHE='tidvattenpolen-v9-0';
-const ASSETS=['./','./index.html','./style.css?v=9.0','./script.js?v=9.0','./manifest.webmanifest'];
+const CACHE='tidvattenpolen-v9-5';
+const ASSETS=['./','./index.html','./style.css?v=9.5','./script.js?v=9.5','./manifest.webmanifest'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));

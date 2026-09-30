@@ -9041,3 +9041,81 @@ document.addEventListener("pointerdown",e=>{
 
   v83PlayWithVisitor();
 },true);
+
+
+/* =========================================================
+   TIDVATTENPÖLEN v9.5 – robust klappning
+   ========================================================= */
+
+/*
+  SVG-träfftestet kan vara kinkigt i vissa webbläsare.
+  Därför använder vi nu två steg:
+  1) exakt SVG-träff om det fungerar
+  2) en mjuk ellips runt den synliga bläckfisken som reserv
+*/
+function v95PointHitsOctopus(clientX, clientY){
+  try{
+    if(typeof v87PointHitsOctopus==="function" &&
+       v87PointHitsOctopus(clientX,clientY)){
+      return true;
+    }
+  }catch{}
+
+  const oct=$("#octopus");
+  if(!oct) return false;
+
+  const r=oct.getBoundingClientRect();
+  if(r.width<4 || r.height<4) return false;
+
+  const cx=r.left+r.width/2;
+  const cy=r.top+r.height/2;
+
+  /* Lite generös träffyta så det känns naturligt att klappa. */
+  const rx=Math.max(22,r.width*.43);
+  const ry=Math.max(22,r.height*.43);
+
+  const dx=(clientX-cx)/rx;
+  const dy=(clientY-cy)/ry;
+
+  return dx*dx + dy*dy <= 1;
+}
+
+function v95DoPet(){
+  if(typeof v60PetWithExistingHand==="function"){
+    v60PetWithExistingHand();
+    return true;
+  }
+  if(typeof v59PetWithRealHand==="function"){
+    v59PetWithRealHand();
+    return true;
+  }
+  if(typeof v57PetFromCorner==="function"){
+    v57PetFromCorner();
+    return true;
+  }
+  return false;
+}
+
+/* Sista fångstlyssnaren för klappning. Den går före gamla tank-klick,
+   men lämnar föremål, besökare, hattar och UI ifred. */
+document.addEventListener("pointerdown", e=>{
+  if(!state || actionLocked) return;
+
+  const tank=$("#tank");
+  if(!tank || !tank.contains(e.target)) return;
+
+  if(e.target.closest?.(
+    ".v71-visitor,.v83-ambient,.v68-mussel,"+
+    ".placed-item,.tank-object,.food-item,.creature,"+
+    "#v66-hat,.v66-hat,#v4-necklace-svg,"+
+    "button,a,input,select,textarea,dialog"
+  )) return;
+
+  if(!v95PointHitsOctopus(e.clientX,e.clientY)) return;
+
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation();
+
+  v95DoPet();
+}, true);
