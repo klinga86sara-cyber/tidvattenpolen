@@ -1,0 +1,5333 @@
+:root{--ink:#123f49;--muted:#4f7077;--aqua:#63cfc6;--aqua-dark:#007f7a;--blue:#248fa3;--navy:#075f67;--pink:#f0007a;--coral:#f07c6c;--shadow:0 18px 45px rgba(3,72,82,.16)}*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;color:var(--ink);background:radial-gradient(circle at 8% 10%,rgba(84,214,207,.25),transparent 24rem),radial-gradient(circle at 92% 80%,rgba(36,143,163,.18),transparent 28rem),#eaf8f6;font-family:ui-rounded,"Trebuchet MS","Segoe UI",sans-serif}.app-shell{width:min(1180px,calc(100% - 24px));margin:0 auto;padding:26px 0 50px}.screen{width:min(620px,100%);margin:52px auto}.start-card,.quiz-card{position:relative;padding:clamp(28px,6vw,46px);border:2px solid rgba(0,127,122,.34);border-radius:30px;background:linear-gradient(135deg,#bdebe6 0%,#63cfc6 55%,#248fa3 100%);box-shadow:var(--shadow);outline:1px solid rgba(255,255,255,.66)}.start-card{text-align:center}.start-card h1,.quiz-card h1{margin:8px 0 12px;color:#005f63;font-size:clamp(2.2rem,7vw,3.4rem);line-height:1.02}.kicker{margin:0 0 7px;color:var(--navy);font-size:.78rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.muted,.profile-line{color:var(--muted)}.decor{position:absolute}.decor-shell{top:-18px;right:24px;font-size:2.4rem}.decor-starfish{left:25px;bottom:20px;color:var(--coral);font-size:2.4rem;transform:rotate(-14deg)}button,input{font:inherit}.primary-button,.secondary-button{min-height:44px;border:0;border-radius:999px;padding:12px 22px;cursor:pointer;font-weight:850}.primary-button{color:#fff;background:linear-gradient(135deg,var(--pink),var(--aqua-dark));box-shadow:0 10px 22px rgba(0,95,99,.18)}.secondary-button{color:var(--navy);background:rgba(255,255,255,.9);border:1px solid rgba(0,95,99,.14)}.quiz-top,.game-header,.needs-header,.dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}.pill,.stage-badge,.count-badge{border-radius:999px;padding:7px 11px;background:rgba(255,255,255,.84);color:var(--navy);font-weight:850;font-size:.78rem}.quiz-options{display:grid;gap:12px;margin-top:22px}.quiz-answer{width:100%;min-height:50px;border:1px solid rgba(0,95,99,.15);border-radius:17px;padding:15px 17px;color:var(--ink);background:rgba(255,255,255,.92);text-align:left;cursor:pointer;font-weight:750}.name-box{margin-top:24px;padding:22px;border-radius:20px;background:rgba(255,255,255,.34)}.name-box label{display:block;margin-bottom:10px;font-weight:850;color:var(--navy)}.name-box input{width:100%;min-height:48px;margin-bottom:12px;border:2px solid rgba(0,95,99,.18);border-radius:14px;padding:12px 14px;text-align:center}.form-error{min-height:1.3em;color:#8b244e}.game-screen{display:grid;gap:18px}.game-header{padding:2px 4px;align-items:flex-start}.game-header h1{margin:2px 0;color:var(--navy);font-size:clamp(1.8rem,5vw,2.6rem)}.header-actions{display:flex;flex-wrap:wrap;gap:9px}.count-badge{background:var(--pink);color:#fff}.tank-wrap,.needs-card,.story-card{border:1px solid rgba(0,95,99,.11);border-radius:26px;background:rgba(255,255,255,.72);box-shadow:0 14px 36px rgba(3,72,82,.11)}.tank-wrap{padding:16px}.tank{position:relative;height:clamp(390px,58vw,610px);overflow:hidden;border-radius:22px;background:radial-gradient(circle at 55% 20%,rgba(255,255,255,.34),transparent 28%),linear-gradient(180deg,#73d8df 0%,#2f9bb2 48%,#0d657d 100%);isolation:isolate;perspective:800px}.tank.evening{background:linear-gradient(180deg,#4aa1b2 0%,#256b82 48%,#123f5a 100%)}.tank.night{background:linear-gradient(180deg,#173c58 0%,#12324c 52%,#081e36 100%)}.water-light{position:absolute;inset:-12% auto auto -8%;width:54%;height:58%;border-radius:50%;background:rgba(255,255,255,.12);filter:blur(10px);transform:rotate(-18deg)}.light-two{left:auto;right:-12%;top:8%;opacity:.55}.back-rock{position:absolute;bottom:42px;width:150px;height:95px;border-radius:58% 42% 30% 30%;background:linear-gradient(155deg,#507a77,#244e51);opacity:.78;z-index:1}.rock-a{left:5%}.rock-b{right:7%;width:190px;height:115px;opacity:.64}.plant{position:absolute;bottom:38px;width:70px;height:170px;z-index:2}.plant-a{left:19%}.plant-b{right:18%;transform:scale(.82)}.plant i{position:absolute;bottom:0;width:17px;height:150px;border-radius:80% 20% 80% 20%;background:linear-gradient(#58b975,#1f785c);transform-origin:bottom;animation:sway 4.5s ease-in-out infinite alternate}.plant i:nth-child(1){left:7px}.plant i:nth-child(2){left:28px;height:165px}.plant i:nth-child(3){left:47px;height:135px}.sand-bed{position:absolute;left:-4%;right:-4%;bottom:-24px;height:100px;border-radius:50% 50% 0 0;background:linear-gradient(#e7cf9c,#c8a873);z-index:3}.decor-layer,.food-layer{position:absolute;inset:0;pointer-events:none;z-index:5}.tank-item{position:absolute;display:grid;place-items:center;filter:drop-shadow(0 5px 5px rgba(0,0,0,.12))}.tank-item .emoji{font-size:clamp(2rem,6vw,4.3rem)}.tank-item.cave .emoji{font-size:clamp(3.3rem,9vw,6.5rem)}.octopus-wrap{position:absolute;left:44%;top:42%;width:190px;aspect-ratio:1.17;padding:0;border:0;background:transparent;transform:translate(-50%,-50%) scale(.72);transform-origin:center;cursor:pointer;z-index:12;will-change:transform}.octopus-svg{width:100%;height:100%;overflow:visible}.octopus-wrap.hungry{filter:saturate(.75)}.octopus-wrap.tired{filter:brightness(.82) saturate(.75)}.octopus-wrap.stressed{filter:hue-rotate(-18deg) saturate(.55)}.octopus-wrap.happy{filter:saturate(1.25) brightness(1.05)}.arm{transform-box:fill-box;transform-origin:center top;animation:armWave 2.8s ease-in-out infinite alternate}.arm2,.arm5{animation-delay:-.6s}.arm3,.arm6{animation-delay:-1.2s}.thought-bubble{position:absolute;left:80%;top:-18px;max-width:160px;padding:8px 10px;border-radius:14px;background:rgba(255,255,255,.92);font-size:.78rem;font-weight:800}.hand{position:absolute;right:-110px;bottom:85px;z-index:18;font-size:clamp(4.5rem,11vw,8rem);transform:rotate(-28deg);transition:right .65s ease,bottom .65s ease,transform .65s ease;pointer-events:none}.hand.visible{right:8%;bottom:92px;transform:rotate(-18deg)}.live-food{position:absolute;font-size:2rem;z-index:10;transition:all .45s linear}.event-toast{position:absolute;left:50%;bottom:16px;transform:translateX(-50%) translateY(12px);max-width:min(88%,520px);padding:10px 14px;border-radius:999px;background:rgba(8,42,55,.78);color:#fff;opacity:0;z-index:30}.event-toast.show{opacity:1;transform:translateX(-50%)}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.action-card{min-height:72px;display:flex;align-items:center;gap:10px;border:1px solid rgba(0,95,99,.12);border-radius:17px;padding:11px 12px;background:rgba(255,255,255,.92);cursor:pointer;text-align:left}.action-card strong,.action-card small{display:block}.action-card small{color:var(--muted)}.action-icon{font-size:1.7rem}.needs-card{padding:18px}.needs-header h2{margin:3px 0;color:var(--navy)}.mood-face{font-size:2.2rem}.needs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}.need{padding:13px;border-radius:16px;background:rgba(238,251,250,.82)}.need-top{display:flex;justify-content:space-between;gap:8px;font-size:.82rem;font-weight:850}.need-track{height:9px;margin-top:9px;overflow:hidden;border-radius:999px;background:rgba(4,84,94,.10)}.need-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--aqua-dark));transition:width .35s ease}.story-card{padding:18px 20px}.game-dialog,.continue-dialog{width:min(650px,calc(100% - 26px));border:0;border-radius:24px;padding:0;color:var(--ink);background:#f7fffe}.game-dialog::backdrop,.continue-dialog::backdrop{background:rgba(0,31,43,.42)}.game-dialog form,.continue-dialog form{padding:24px}.close-button{width:44px;height:44px;border:0;border-radius:50%;background:#e8f5f3;color:var(--navy);font-size:1.7rem}.inventory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.inventory-item{min-height:88px;display:flex;align-items:center;gap:12px;border:1px solid rgba(0,95,99,.12);border-radius:17px;padding:12px;background:#fff;text-align:left}.inventory-item.locked{opacity:.48}.big-emoji{font-size:2.2rem}.quests-list{display:grid;gap:10px;margin-top:14px}.quest{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:13px;border-radius:16px;background:#edf9f7}.quest.done{background:#e4f7ec}.quest-icon{font-size:1.55rem}.quest small{display:block;color:var(--muted)}.quest-state{font-weight:900;color:var(--navy)}.dialog-buttons{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap}@keyframes armWave{from{transform:rotate(-5deg) scaleY(.98)}to{transform:rotate(7deg) scaleY(1.03)}}@keyframes sway{from{transform:rotate(-9deg)}to{transform:rotate(10deg)}}@media(max-width:760px){.game-header{display:block}.header-actions{margin-top:12px}.quick-actions{grid-template-columns:repeat(2,1fr)}.needs-grid{grid-template-columns:repeat(2,1fr)}.octopus-wrap{width:155px}}@media(max-width:470px){.app-shell{width:min(100% - 14px,1180px);padding-top:12px}.screen{margin:24px auto}.start-card,.quiz-card{border-radius:23px;padding:27px 20px}.tank-wrap{padding:9px}.tank{height:430px}.inventory-grid{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* ===== Tidvattenpölen v3.2 ===== */
+
+/* All loose aquarium objects now visually sit on the sand. */
+.tank-item {
+  top: auto !important;
+  bottom: 45px !important;
+  transform-origin: center bottom !important;
+}
+.tank-item .emoji {
+  display: block;
+  line-height: 1;
+  background: transparent !important;
+}
+.tank-item.shell-item .emoji {
+  background: transparent !important;
+  filter: drop-shadow(0 3px 2px rgba(0,0,0,.12));
+}
+
+/* Visible behavior states */
+.octopus-wrap.resting {
+  filter: brightness(.78) saturate(.72);
+}
+.octopus-wrap.resting .arm {
+  animation-duration: 7s !important;
+}
+.octopus-wrap.resting .head {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sleepyBreath 3.6s ease-in-out infinite alternate;
+}
+
+.octopus-wrap.hunting {
+  filter: saturate(1.18) contrast(1.05);
+}
+.octopus-wrap.hunting .arm {
+  animation-duration: .8s !important;
+}
+.octopus-wrap.catching .arm1,
+.octopus-wrap.catching .arm2,
+.octopus-wrap.catching .arm3,
+.octopus-wrap.catching .arm4 {
+  animation: grabPrey .42s ease-in-out 2 alternate !important;
+}
+
+.live-food.fleeing {
+  animation: preyWiggle .35s ease-in-out infinite alternate;
+}
+.live-food.caught {
+  animation: none !important;
+  transform: scale(.7) !important;
+  opacity: .92;
+}
+
+.tank-item.toy-active {
+  animation: toyBounce .65s ease-in-out 2;
+}
+
+@keyframes sleepyBreath {
+  from { transform: scale(.985); }
+  to { transform: scale(1.015); }
+}
+@keyframes grabPrey {
+  from { transform: rotate(-5deg) scaleY(.98); }
+  to { transform: rotate(16deg) scaleY(1.09); }
+}
+@keyframes preyWiggle {
+  from { transform: translate(-3px,-2px) rotate(-7deg); }
+  to { transform: translate(4px,3px) rotate(8deg); }
+}
+@keyframes toyBounce {
+  0%,100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.12) rotate(7deg); }
+}
+
+
+/* ===== Tidvattenpölen v3.4 ===== */
+
+/* Sprid ut föremålen och håll dem nere på botten */
+.tank-item {
+  top: auto !important;
+  bottom: 45px !important;
+  transform-origin: center bottom !important;
+  transition: left .8s ease, transform .55s ease, filter .4s ease;
+}
+.tank-item .emoji {
+  display: block;
+  line-height: 1;
+  background: transparent !important;
+}
+.tank-item.shell-item .emoji {
+  background: transparent !important;
+  filter: drop-shadow(0 3px 2px rgba(0,0,0,.12));
+}
+
+/* När handen leker med ett föremål */
+.tank-item.hand-playing {
+  z-index: 19 !important;
+  filter: drop-shadow(0 8px 8px rgba(0,0,0,.18));
+  animation: handToyPulse .55s ease-in-out 3;
+}
+.tank-item.ball-playing {
+  animation: ballRoll .65s linear 2;
+}
+.tank-item.ring-playing {
+  filter: drop-shadow(0 0 10px rgba(255,255,255,.85));
+}
+
+/* Handen kan nu flyttas till leksaken */
+.hand.play-hand {
+  right: auto !important;
+  bottom: auto !important;
+  transition: left .75s ease, top .75s ease, transform .75s ease, opacity .35s ease !important;
+  opacity: 1;
+  z-index: 25;
+}
+
+/* Humöret syns tydligare i ansiktet */
+.octopus-wrap.mood-happy .head { filter: saturate(1.18) brightness(1.05); }
+.octopus-wrap.mood-hungry .head { filter: saturate(.72) brightness(.95); }
+.octopus-wrap.mood-tired .head { filter: brightness(.78) saturate(.7); }
+.octopus-wrap.mood-stressed .head { filter: hue-rotate(-12deg) saturate(.6); }
+.octopus-wrap.mood-bored .head { filter: saturate(.86); }
+
+.octopus-wrap.mood-tired ellipse[fill="#1f2530"] {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scaleY(.45);
+}
+.octopus-wrap.mood-stressed ellipse[fill="#1f2530"] {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scaleY(1.18);
+}
+.octopus-wrap.mood-happy ellipse[fill="#1f2530"] {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scaleY(.82);
+}
+
+@keyframes handToyPulse {
+  0%,100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.12) rotate(7deg); }
+}
+@keyframes ballRoll {
+  from { transform: translateX(-50%) scale(1) rotate(0deg); }
+  to { transform: translateX(-50%) scale(1) rotate(360deg); }
+}
+
+
+/* ===== Tidvattenpölen v3.5 ===== */
+
+/* Bebisen börjar tydligt mindre så tillväxten syns bättre. */
+.octopus-wrap.stage-baby { --life-stage-scale: .54; }
+.octopus-wrap.stage-growing { --life-stage-scale: .70; }
+.octopus-wrap.stage-young { --life-stage-scale: .86; }
+.octopus-wrap.stage-adult { --life-stage-scale: 1.04; }
+
+/* När bläckfisken gömmer sig i kojan ska den se delvis dold ut. */
+.octopus-wrap.in-cave {
+  opacity: .78;
+  filter: brightness(.74) saturate(.7);
+}
+
+/* Lite tydligare spontan aktivitet */
+.octopus-wrap.spontaneous-play .arm {
+  animation-duration: 1s !important;
+}
+
+.favorite-marker::after {
+  content: "♥";
+  position: absolute;
+  right: -8px;
+  top: -10px;
+  font-size: .85rem;
+  color: #f0007a;
+  text-shadow: 0 1px 4px rgba(255,255,255,.8);
+}
+
+
+/* ===== Tidvattenpölen v3.6 – allt synligt utan scroll på dator ===== */
+
+@media (min-width: 900px) and (min-height: 650px) {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+
+  .app-shell {
+    width: min(1220px, calc(100% - 24px));
+    height: 100vh;
+    padding: 10px 0;
+    overflow: hidden;
+  }
+
+  .game-screen {
+    height: calc(100vh - 20px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(300px, .8fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .game-header {
+    grid-column: 1 / -1;
+    padding: 0 4px;
+    min-height: 56px;
+  }
+
+  .game-header h1 {
+    font-size: clamp(1.45rem, 2.5vw, 2rem);
+    margin: 0;
+  }
+
+  .game-header .kicker {
+    margin-bottom: 2px;
+  }
+
+  .profile-line {
+    font-size: .82rem;
+  }
+
+  .tank-wrap {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    min-height: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tank {
+    flex: 1 1 auto;
+    height: auto !important;
+    min-height: 0;
+  }
+
+  .quick-actions {
+    flex: 0 0 auto;
+    margin-top: 8px;
+    gap: 7px;
+  }
+
+  .action-card {
+    min-height: 56px;
+    padding: 7px 9px;
+  }
+
+  .action-icon {
+    font-size: 1.35rem;
+  }
+
+  .action-card strong {
+    font-size: .88rem;
+  }
+
+  .action-card small {
+    font-size: .68rem;
+  }
+
+  .needs-card {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 0;
+    padding: 14px;
+  }
+
+  .needs-header h2 {
+    font-size: 1.12rem;
+  }
+
+  .mood-face {
+    font-size: 1.8rem;
+  }
+
+  .needs-grid {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 10px;
+  }
+
+  .needs-grid .need:last-child {
+    grid-column: auto;
+  }
+
+  .need {
+    padding: 8px 10px;
+  }
+
+  .need-track {
+    margin-top: 5px;
+    height: 7px;
+  }
+
+  .story-card {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 12px 14px;
+    min-height: 92px;
+  }
+
+  .story-card p:last-child {
+    margin-top: 5px;
+    font-size: .9rem;
+    line-height: 1.35;
+  }
+
+  .header-actions .secondary-button {
+    min-height: 38px;
+    padding: 8px 15px;
+    font-size: .86rem;
+  }
+}
+
+/* På lite lägre laptopskärmar gör vi det ännu kompaktare. */
+@media (min-width: 900px) and (max-height: 760px) {
+  .app-shell {
+    padding: 6px 0;
+  }
+
+  .game-screen {
+    height: calc(100vh - 12px);
+    gap: 7px;
+  }
+
+  .game-header {
+    min-height: 48px;
+  }
+
+  .tank-wrap {
+    padding: 7px;
+  }
+
+  .quick-actions {
+    margin-top: 6px;
+  }
+
+  .action-card {
+    min-height: 50px;
+  }
+
+  .needs-card {
+    padding: 10px 12px;
+  }
+
+  .needs-grid {
+    gap: 5px;
+    margin-top: 7px;
+  }
+
+  .need {
+    padding: 6px 9px;
+  }
+
+  .story-card {
+    min-height: 76px;
+    padding: 9px 12px;
+  }
+}
+
+/* Mobil och små skärmar får fortsätta scrolla normalt. */
+@media (max-width: 899px), (max-height: 649px) {
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .app-shell {
+    height: auto;
+    overflow: visible;
+  }
+}
+
+
+/* ===== Tidvattenpölen v3.7 – 5 min demo-läge ===== */
+.demo-chip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(6, 54, 67, .72);
+  color: #fff;
+  font-size: .76rem;
+  font-weight: 850;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 14px rgba(0,0,0,.12);
+}
+.demo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #63cfc6;
+  animation: demoPulse 1.4s ease-in-out infinite alternate;
+}
+@keyframes demoPulse {
+  from { transform: scale(.8); opacity: .65; }
+  to { transform: scale(1.18); opacity: 1; }
+}
+
+.discovery {
+  position: absolute;
+  z-index: 9;
+  font-size: 1.7rem;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,.16));
+  animation: discoveryPop .6s ease-out;
+}
+@keyframes discoveryPop {
+  from { transform: scale(.3) translateY(12px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.octopus-wrap.alert .head {
+  filter: saturate(1.25) brightness(1.06);
+}
+.octopus-wrap.alert .arm {
+  animation-duration: .9s !important;
+}
+
+
+/* ===== v3.8 – mer synligt spontant liv ===== */
+.tank-item.explore-focus {
+  filter: drop-shadow(0 0 12px rgba(255,255,255,.9)) drop-shadow(0 5px 5px rgba(0,0,0,.14));
+  animation: exploreFocus .8s ease-in-out 2 alternate;
+}
+
+.octopus-wrap.exploring .arm {
+  animation-duration: 1.35s !important;
+}
+
+@keyframes exploreFocus {
+  from { transform: translateX(-50%) scale(1); }
+  to { transform: translateX(-50%) scale(1.12); }
+}
+
+
+/* ===== v3.9 – reset för redovisning ===== */
+.reset-button {
+  border-color: rgba(240, 0, 122, .22);
+}
+
+.reset-button:hover {
+  box-shadow: 0 7px 18px rgba(240, 0, 122, .12);
+}
+
+
+/* ===== v3.10 – leken ska synas tydligt ===== */
+
+.octopus-wrap.play-lock {
+  z-index: 22 !important;
+}
+
+.tank-item.play-target {
+  z-index: 21 !important;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,.9))
+          drop-shadow(0 5px 7px rgba(0,0,0,.16));
+}
+
+.tank-item.ball-play-target {
+  animation: ballPlayBounce .45s ease-in-out 5 alternate;
+}
+
+.tank-item.ring-play-target {
+  animation: ringPlayGlow .6s ease-in-out 4 alternate;
+}
+
+.tank-item.shell-play-target {
+  animation: shellPlayLift .5s ease-in-out 3 alternate;
+}
+
+@keyframes ballPlayBounce {
+  from { transform: translateX(-50%) translateY(0) scale(1); }
+  to { transform: translateX(-50%) translateY(-12px) scale(1.08); }
+}
+
+@keyframes ringPlayGlow {
+  from { transform: translateX(-50%) scale(1); filter: drop-shadow(0 0 4px rgba(255,255,255,.3)); }
+  to { transform: translateX(-50%) scale(1.12); filter: drop-shadow(0 0 16px rgba(255,255,255,1)); }
+}
+
+@keyframes shellPlayLift {
+  from { transform: translateX(-50%) translateY(0) rotate(0deg); }
+  to { transform: translateX(-50%) translateY(-10px) rotate(8deg); }
+}
+
+
+/* ===== v3.11 – självständig lek med riktiga föremål ===== */
+
+.tank-item.self-play {
+  z-index: 22 !important;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,.9))
+          drop-shadow(0 6px 8px rgba(0,0,0,.15));
+}
+
+.tank-item.ball-self-play {
+  animation: ballSelfBounce .42s ease-in-out 6 alternate;
+}
+
+.tank-item.shell-self-play {
+  animation: shellSelfLift .48s ease-in-out 4 alternate;
+}
+
+.tank-item.ring-self-play {
+  animation: ringSelfGlow .55s ease-in-out 5 alternate;
+}
+
+@keyframes ballSelfBounce {
+  from { transform: translateX(-50%) translateY(0) rotate(0deg) scale(1); }
+  to { transform: translateX(-50%) translateY(-15px) rotate(35deg) scale(1.08); }
+}
+
+@keyframes shellSelfLift {
+  from { transform: translateX(-50%) translateY(0) rotate(0deg); }
+  to { transform: translateX(-50%) translateY(-12px) rotate(10deg); }
+}
+
+@keyframes ringSelfGlow {
+  from { transform: translateX(-50%) scale(1); }
+  to { transform: translateX(-50%) scale(1.12); }
+}
+
+
+/* ===== v3.12 – leksaker kan lyftas upp i vattnet ===== */
+
+.tank-item.water-play {
+  bottom: auto !important;
+  z-index: 24 !important;
+  transition:
+    left .55s ease,
+    top .55s ease,
+    transform .45s ease,
+    filter .35s ease !important;
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.7))
+    drop-shadow(0 6px 8px rgba(0,0,0,.16));
+}
+
+.tank-item.water-play .emoji {
+  animation: waterToyDrift .65s ease-in-out infinite alternate;
+}
+
+@keyframes waterToyDrift {
+  from { transform: translateY(-3px) rotate(-6deg); }
+  to { transform: translateY(4px) rotate(7deg); }
+}
+
+
+/* ===== v3.13 – tydligare lek + rockring ===== */
+
+.tank-item.showcase-toy {
+  z-index: 25 !important;
+  filter:
+    drop-shadow(0 0 14px rgba(255,255,255,.95))
+    drop-shadow(0 7px 8px rgba(0,0,0,.16));
+}
+
+.tank-item.ball-water {
+  transition:
+    left .9s cubic-bezier(.22,.61,.36,1),
+    top .9s cubic-bezier(.22,.61,.36,1),
+    transform .8s ease !important;
+}
+
+.tank-item.ball-water .emoji {
+  animation: ballWaterFloat 1.1s ease-in-out infinite alternate;
+}
+
+.tank-item.ring-showcase .emoji {
+  animation: ringTilt 1s ease-in-out infinite alternate;
+}
+
+.tank-item.ring-hoop {
+  animation: ringOrbit 1s linear infinite;
+}
+
+.tank-item.shell-showcase .emoji {
+  animation: shellDrift .9s ease-in-out infinite alternate;
+}
+
+@keyframes ballWaterFloat {
+  from { transform: translateY(2px) rotate(-7deg); }
+  to { transform: translateY(-7px) rotate(8deg); }
+}
+
+@keyframes ringTilt {
+  from { transform: rotate(-8deg); }
+  to { transform: rotate(8deg); }
+}
+
+@keyframes ringOrbit {
+  0%   { transform: translate(-50%,-50%) rotate(0deg) scale(1); }
+  25%  { transform: translate(-50%,-50%) rotate(90deg) scale(1.04); }
+  50%  { transform: translate(-50%,-50%) rotate(180deg) scale(1); }
+  75%  { transform: translate(-50%,-50%) rotate(270deg) scale(.98); }
+  100% { transform: translate(-50%,-50%) rotate(360deg) scale(1); }
+}
+
+@keyframes shellDrift {
+  from { transform: translateY(0) rotate(-5deg); }
+  to { transform: translateY(-6px) rotate(7deg); }
+}
+
+
+/* ===== v3.14 – lek i mitten av skärmen ===== */
+
+/* När en leksak används flyttas den fram och blir större så leken syns tydligt. */
+.tank-item.play-center,
+.tank-item.water-play.play-center {
+  z-index: 30 !important;
+  transform-origin: center !important;
+  filter:
+    drop-shadow(0 0 18px rgba(255,255,255,.95))
+    drop-shadow(0 10px 14px rgba(0,0,0,.22)) !important;
+}
+
+.tank-item.play-center .emoji {
+  font-size: clamp(3rem, 8vw, 5.6rem) !important;
+}
+
+.tank-item.cave.play-center .emoji {
+  font-size: clamp(4rem, 10vw, 6.8rem) !important;
+}
+
+.octopus-wrap.center-play {
+  z-index: 31 !important;
+}
+
+/* Handen hamnar också tydligt i mitten vid gemensam lek. */
+.hand.center-play-hand {
+  z-index: 32 !important;
+  font-size: clamp(5rem, 11vw, 8rem);
+}
+
+
+/* ===== v3.15 – all lek hålls i mitten ===== */
+
+.tank-item.play-center,
+.tank-item.water-play.play-center {
+  left: 50% !important;
+  top: 46% !important;
+  bottom: auto !important;
+  z-index: 31 !important;
+  transform: translate(-50%,-50%) scale(1.28) !important;
+}
+
+.tank-item.play-center.zone-left  { left: 43% !important; top: 46% !important; }
+.tank-item.play-center.zone-right { left: 57% !important; top: 46% !important; }
+.tank-item.play-center.zone-up    { left: 50% !important; top: 37% !important; }
+.tank-item.play-center.zone-down  { left: 50% !important; top: 55% !important; }
+
+.octopus-wrap.center-play {
+  z-index: 32 !important;
+}
+
+.hand.center-play-hand {
+  left: 65% !important;
+  top: 48% !important;
+  right: auto !important;
+  bottom: auto !important;
+  z-index: 33 !important;
+}
+
+/* ===== v3.17 – personligheten syns i beteendet ===== */
+.personality-event {
+  position: absolute;
+  z-index: 28;
+  pointer-events: none;
+}
+
+.sand-puff {
+  left: 50%;
+  bottom: 54px;
+  width: 110px;
+  height: 42px;
+  transform: translateX(-50%);
+}
+
+.sand-puff span {
+  position: absolute;
+  bottom: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(232, 205, 154, .9);
+  box-shadow: 0 0 7px rgba(255,255,255,.4);
+  animation: sandRise 1.15s ease-out forwards;
+}
+.sand-puff span:nth-child(1){left:12px;animation-delay:0s}
+.sand-puff span:nth-child(2){left:31px;animation-delay:.08s}
+.sand-puff span:nth-child(3){left:52px;animation-delay:.16s}
+.sand-puff span:nth-child(4){left:72px;animation-delay:.05s}
+.sand-puff span:nth-child(5){left:91px;animation-delay:.13s}
+
+.found-object {
+  left: 50%;
+  bottom: 62px;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  animation: foundPop .6s ease-out both;
+}
+
+.octopus-wrap.personality-focus .head {
+  filter: saturate(1.22) brightness(1.05);
+}
+
+@keyframes sandRise {
+  from { transform: translateY(0) scale(.7); opacity:.9; }
+  to { transform: translateY(-34px) scale(1.25); opacity:0; }
+}
+
+@keyframes foundPop {
+  from { transform: translateX(-50%) scale(.25); opacity:0; }
+  to { transform: translateX(-50%) scale(1); opacity:1; }
+}
+
+
+/* ===== Tidvattenpölen v3.19 – större sandbotten ===== */
+
+/* Sanden får större yta så fler saker ryms naturligt på botten. */
+.sand-bed {
+  left: -6% !important;
+  right: -6% !important;
+  bottom: -34px !important;
+  height: 150px !important;
+  border-radius: 46% 54% 0 0 !important;
+}
+
+/* Alla fasta saker placeras lite högre så de verkligen står på sanden. */
+.tank-item {
+  bottom: 72px !important;
+}
+
+/* Kojor och större objekt får lite mer "markkontakt". */
+.tank-item.cave {
+  bottom: 64px !important;
+}
+
+/* Växter hamnar också bättre i den djupare sanden. */
+.plant {
+  bottom: 62px !important;
+}
+
+/* Bakgrundsstenar flyttas upp något så botten känns djupare. */
+.back-rock {
+  bottom: 62px !important;
+}
+
+/* På mindre skärmar hålls sanden stor men inte för hög. */
+@media (max-width: 760px) {
+  .sand-bed {
+    height: 125px !important;
+    bottom: -30px !important;
+  }
+
+  .tank-item {
+    bottom: 62px !important;
+  }
+
+  .tank-item.cave {
+    bottom: 56px !important;
+  }
+
+  .plant,
+  .back-rock {
+    bottom: 54px !important;
+  }
+}
+
+
+/* ===== Tidvattenpölen v3.21 – bredare lekyta i sanden ===== */
+
+/* Gör sandytan visuellt bredare och flackare så fler saker får plats. */
+.sand-bed {
+  left: -10% !important;
+  right: -10% !important;
+  height: 175px !important;
+  bottom: -42px !important;
+  border-radius: 38% 38% 0 0 !important;
+}
+
+/* Skapa en större "sandzon" där föremål kan spridas ut. */
+.tank-item {
+  bottom: 82px !important;
+}
+
+.tank-item.cave {
+  bottom: 72px !important;
+}
+
+.plant {
+  bottom: 74px !important;
+}
+
+.back-rock {
+  bottom: 72px !important;
+}
+
+/* På små skärmar behåll den bred men lite lägre. */
+@media (max-width: 760px) {
+  .sand-bed {
+    left: -12% !important;
+    right: -12% !important;
+    height: 145px !important;
+    bottom: -36px !important;
+  }
+
+  .tank-item {
+    bottom: 70px !important;
+  }
+
+  .tank-item.cave {
+    bottom: 62px !important;
+  }
+
+  .plant,
+  .back-rock {
+    bottom: 62px !important;
+  }
+}
+
+
+/* ===== v3.24 – klickbara och flyttbara saker ===== */
+
+.decor-layer {
+  pointer-events: none;
+}
+
+.tank-item {
+  pointer-events: auto !important;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tank-item.dragging {
+  cursor: grabbing;
+  z-index: 40 !important;
+  filter:
+    drop-shadow(0 0 14px rgba(255,255,255,.9))
+    drop-shadow(0 10px 14px rgba(0,0,0,.22));
+}
+
+.tank-item.clicked-toy {
+  animation: clickedToy .45s ease-in-out 2 alternate;
+}
+
+@keyframes clickedToy {
+  from { filter: drop-shadow(0 0 3px rgba(255,255,255,.2)); }
+  to   { filter: drop-shadow(0 0 16px rgba(255,255,255,1)); }
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .tank-item:hover {
+    filter:
+      drop-shadow(0 0 10px rgba(255,255,255,.7))
+      drop-shadow(0 5px 6px rgba(0,0,0,.16));
+  }
+}
+
+
+/* ===== v3.25 – klicka på sanden för att gräva ===== */
+.sand-bed {
+  cursor: pointer;
+  pointer-events: auto !important;
+}
+
+.sand-bed.sand-searching {
+  animation: sandPulse .8s ease-in-out 2 alternate;
+}
+
+@keyframes sandPulse {
+  from { filter: brightness(1); }
+  to   { filter: brightness(1.12); }
+}
+
+
+/* ===== v3.26 – armarna arbetar tydligare + smygjakt ===== */
+
+.octopus-wrap.using-arms .arm {
+  animation: v326BusyArm 1.05s ease-in-out infinite alternate !important;
+}
+.octopus-wrap.using-arms .arm1,
+.octopus-wrap.using-arms .arm4 { animation-delay: -.15s !important; }
+.octopus-wrap.using-arms .arm2,
+.octopus-wrap.using-arms .arm5 { animation-delay: -.45s !important; }
+.octopus-wrap.using-arms .arm3,
+.octopus-wrap.using-arms .arm6 { animation-delay: -.75s !important; }
+
+.octopus-wrap.digging {
+  transform-origin: center bottom;
+}
+.octopus-wrap.digging .arm1,
+.octopus-wrap.digging .arm2,
+.octopus-wrap.digging .arm3,
+.octopus-wrap.digging .arm4,
+.octopus-wrap.digging .arm5,
+.octopus-wrap.digging .arm6 {
+  animation: v326DigArm .5s ease-in-out infinite alternate !important;
+}
+
+.octopus-wrap.stalking {
+  filter: saturate(.72) brightness(.82) contrast(1.05);
+  transition: left 1.6s ease, top 1.6s ease, transform 1.6s ease, filter .7s ease !important;
+}
+.octopus-wrap.stalking .head {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  animation: v326Flatten 1.5s ease-in-out infinite alternate;
+}
+.octopus-wrap.stalking .arm {
+  animation: v326CreepArm 1.7s ease-in-out infinite alternate !important;
+}
+.octopus-wrap.stalking .arm2,
+.octopus-wrap.stalking .arm5 { animation-delay: -.55s !important; }
+.octopus-wrap.stalking .arm3,
+.octopus-wrap.stalking .arm6 { animation-delay: -1s !important; }
+
+.octopus-wrap.strike .arm1,
+.octopus-wrap.strike .arm2,
+.octopus-wrap.strike .arm3,
+.octopus-wrap.strike .arm4,
+.octopus-wrap.strike .arm5,
+.octopus-wrap.strike .arm6 {
+  animation: v326StrikeArm .24s ease-out 3 alternate !important;
+}
+
+.octopus-wrap.eating .arm {
+  animation: v326HoldArm .8s ease-in-out infinite alternate !important;
+}
+
+.live-food.v326-prey {
+  transition: left 1.1s ease, top 1.1s ease, transform .25s ease;
+  filter: drop-shadow(0 3px 3px rgba(0,0,0,.18));
+}
+
+@keyframes v326BusyArm {
+  from { transform: rotate(-11deg) scaleY(.94) scaleX(.98); }
+  to   { transform: rotate(13deg) scaleY(1.09) scaleX(1.04); }
+}
+@keyframes v326DigArm {
+  from { transform: rotate(-18deg) translateY(0) scaleY(.92); }
+  to   { transform: rotate(19deg) translateY(8px) scaleY(1.10); }
+}
+@keyframes v326CreepArm {
+  from { transform: rotate(-8deg) scaleY(.88) scaleX(1.02); }
+  to   { transform: rotate(6deg) scaleY(1.16) scaleX(.98); }
+}
+@keyframes v326Flatten {
+  from { transform: scaleY(.92) scaleX(1.05); }
+  to   { transform: scaleY(.82) scaleX(1.12); }
+}
+@keyframes v326StrikeArm {
+  from { transform: rotate(-8deg) scaleY(1); }
+  to   { transform: rotate(18deg) scaleY(1.35); }
+}
+@keyframes v326HoldArm {
+  from { transform: rotate(-4deg) scaleY(.98); }
+  to   { transform: rotate(7deg) scaleY(1.08); }
+}
+
+
+/* ===== v3.27 – akvariet styr spelet, inte snabbknappar ===== */
+.quick-actions { display:none !important; }
+
+#found-layer, #dig-layer {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+#found-layer { z-index:18; }
+#dig-layer { z-index:26; }
+
+.found-item {
+  position:absolute;
+  transform:translate(-50%,-50%);
+  font-size:30px;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.18));
+  animation:v327FoundPop .55s ease-out both;
+}
+@keyframes v327FoundPop {
+  from { transform:translate(-50%,-30%) scale(.25); opacity:0; }
+  to   { transform:translate(-50%,-50%) scale(1); opacity:1; }
+}
+
+.dig-cloud {
+  position:absolute;
+  width:110px;
+  height:45px;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  background:
+    radial-gradient(circle at 20% 60%, rgba(227,196,133,.9) 0 5px, transparent 6px),
+    radial-gradient(circle at 38% 35%, rgba(227,196,133,.8) 0 4px, transparent 5px),
+    radial-gradient(circle at 58% 65%, rgba(227,196,133,.85) 0 5px, transparent 6px),
+    radial-gradient(circle at 77% 38%, rgba(227,196,133,.75) 0 4px, transparent 5px);
+  animation:v327DigCloud .7s ease-in-out infinite alternate;
+}
+@keyframes v327DigCloud {
+  from { opacity:.45; transform:translate(-50%,-45%) scale(.86); }
+  to   { opacity:.95; transform:translate(-50%,-55%) scale(1.08); }
+}
+
+/* Custom glass jar so the contents and lid are visible. */
+.tank-item.jar-item .emoji { display:none; }
+.jar-visual {
+  position:relative;
+  width:58px;
+  height:70px;
+  border:4px solid rgba(225,247,250,.95);
+  border-top-width:3px;
+  border-radius:12px 12px 18px 18px;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(171,231,237,.16));
+  box-shadow:inset 8px 0 12px rgba(255,255,255,.16), 0 5px 8px rgba(0,0,0,.15);
+}
+.jar-content {
+  position:absolute;
+  left:50%;
+  top:55%;
+  transform:translate(-50%,-50%);
+  font-size:27px;
+  z-index:1;
+}
+.jar-lid {
+  position:absolute;
+  left:50%;
+  top:-11px;
+  width:49px;
+  height:12px;
+  transform:translateX(-50%);
+  border-radius:5px 5px 3px 3px;
+  background:#7e8a8c;
+  box-shadow:0 2px 3px rgba(0,0,0,.22);
+  transition:transform .75s ease, left .75s ease, top .75s ease, opacity .5s ease;
+  z-index:3;
+}
+.jar-item.lid-opening .jar-lid {
+  left:86%;
+  top:-25px;
+  transform:translateX(-50%) rotate(42deg);
+}
+.jar-item.jar-empty .jar-content { opacity:0; }
+
+/* Shell becomes a proper hiding/play object. */
+.tank-item.shell-item { z-index:21; }
+.tank-item.shell-item .emoji { font-size:58px; }
+.tank-item.shell-item.shell-active .emoji {
+  animation:v327ShellWobble 1.2s ease-in-out infinite alternate;
+}
+@keyframes v327ShellWobble {
+  from { transform:rotate(-5deg) scale(1.02); }
+  to   { transform:rotate(5deg) scale(1.09); }
+}
+.octopus-wrap.in-shell-play {
+  transition:left 1.2s ease, top 1.2s ease, transform 1.2s ease, opacity .5s ease !important;
+  z-index:19 !important;
+}
+
+/* Wild prey appears on its own and waits to be clicked. */
+.live-food.waiting-prey {
+  pointer-events:auto;
+  cursor:pointer;
+  z-index:24;
+  animation:v327PreyIdle 2.4s ease-in-out infinite alternate;
+}
+@keyframes v327PreyIdle {
+  from { transform:translate(-50%,-50%) translateX(-5px) rotate(-4deg); }
+  to   { transform:translate(-50%,-50%) translateX(7px) rotate(5deg); }
+}
+.live-food.waiting-prey::after {
+  content:"klicka";
+  position:absolute;
+  left:50%;
+  top:-17px;
+  transform:translateX(-50%);
+  font-size:9px;
+  line-height:1;
+  padding:3px 5px;
+  border-radius:8px;
+  color:#174b50;
+  background:rgba(255,255,255,.85);
+  opacity:.9;
+}
+
+
+/* ===== v3.28 – mer levande akvarium ===== */
+
+.found-item {
+  pointer-events:auto !important;
+  cursor:grab;
+  touch-action:none;
+  user-select:none;
+}
+.found-item.dragging {
+  cursor:grabbing;
+  z-index:60 !important;
+  filter:drop-shadow(0 8px 8px rgba(0,0,0,.28));
+}
+
+/* Små, ständiga armrörelser även när han bara "är". */
+.octopus-wrap.alive-idle .arm1 { animation:v328IdleArmA 2.4s ease-in-out infinite alternate !important; }
+.octopus-wrap.alive-idle .arm2 { animation:v328IdleArmB 3s ease-in-out infinite alternate !important; }
+.octopus-wrap.alive-idle .arm3 { animation:v328IdleArmA 2.7s ease-in-out infinite alternate-reverse !important; }
+.octopus-wrap.alive-idle .arm4 { animation:v328IdleArmB 3.4s ease-in-out infinite alternate !important; }
+.octopus-wrap.alive-idle .arm5 { animation:v328IdleArmA 2.9s ease-in-out infinite alternate !important; }
+.octopus-wrap.alive-idle .arm6 { animation:v328IdleArmB 3.2s ease-in-out infinite alternate-reverse !important; }
+
+@keyframes v328IdleArmA {
+  from { transform:rotate(-4deg) scaleY(.98); }
+  to   { transform:rotate(7deg) scaleY(1.06); }
+}
+@keyframes v328IdleArmB {
+  from { transform:rotate(5deg) scaleY(1.02); }
+  to   { transform:rotate(-6deg) scaleY(.95); }
+}
+
+.octopus-wrap.inspecting .arm {
+  animation:v328Inspect 1.2s ease-in-out infinite alternate !important;
+}
+@keyframes v328Inspect {
+  from { transform:rotate(-8deg) scaleY(.94); }
+  to   { transform:rotate(10deg) scaleY(1.12); }
+}
+
+.octopus-wrap.collecting .arm {
+  animation:v328Carry 1s ease-in-out infinite alternate !important;
+}
+@keyframes v328Carry {
+  from { transform:rotate(-5deg) scaleY(.98); }
+  to   { transform:rotate(6deg) scaleY(1.08); }
+}
+
+.habit-bubble {
+  position:absolute;
+  z-index:65;
+  pointer-events:none;
+  padding:5px 8px;
+  border-radius:12px;
+  font-size:12px;
+  background:rgba(255,255,255,.88);
+  color:#174b50;
+  transform:translate(-50%,-50%);
+  animation:v328Bubble 2.4s ease-out both;
+}
+@keyframes v328Bubble {
+  0% { opacity:0; transform:translate(-50%,-20%) scale(.85); }
+  15%,75% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  100% { opacity:0; transform:translate(-50%,-70%) scale(.95); }
+}
+
+
+/* ===== v3.29 – bredare och rymligare sandbotten ===== */
+
+/* Sanden går nu tydligare från kant till kant och får mer plats för fynd/leksaker. */
+.sand-bed {
+  left: -16% !important;
+  right: -16% !important;
+  width: auto !important;
+  height: 205px !important;
+  bottom: -48px !important;
+  border-radius: 28% 28% 0 0 !important;
+}
+
+/* Saker på botten får lite mer spridning och plats ovanpå den större sandytan. */
+.tank-item {
+  max-width: 90px;
+}
+
+#found-layer .found-item {
+  font-size: 32px;
+}
+
+/* Flyttbara fynd får använda mer av tankens bredd. */
+@media (min-width: 761px) {
+  #found-layer .found-item {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Anpassning för mindre skärmar. */
+@media (max-width: 760px) {
+  .sand-bed {
+    left: -18% !important;
+    right: -18% !important;
+    height: 170px !important;
+    bottom: -40px !important;
+    border-radius: 24% 24% 0 0 !important;
+  }
+
+  #found-layer .found-item {
+    font-size: 28px;
+  }
+}
+
+
+/* ===== v3.30 – matfynd går att klicka på ===== */
+.found-item.food-found {
+  cursor:pointer;
+  animation:v330FoodPulse 1.8s ease-in-out infinite alternate;
+}
+.found-item.food-found::after {
+  content:"ät";
+  position:absolute;
+  left:50%;
+  top:-14px;
+  transform:translateX(-50%);
+  font-size:9px;
+  padding:2px 5px;
+  border-radius:8px;
+  color:#174b50;
+  background:rgba(255,255,255,.9);
+}
+@keyframes v330FoodPulse {
+  from { filter:drop-shadow(0 2px 3px rgba(0,0,0,.15)); }
+  to   { filter:drop-shadow(0 0 11px rgba(255,255,255,.95)); }
+}
+
+
+/* ===== v3.31 – sakerna ligger inte längre på en enda rad ===== */
+.tank-item,
+.found-item {
+  touch-action: none !important;
+}
+
+/* Saker högre upp på sanden kan hamna bakom saker längre fram. */
+.tank-item,
+.found-item {
+  transition: filter .15s ease;
+}
+
+
+/* ===== v3.32 – större djup i sandytan ===== */
+.sand-bed {
+  height: 225px !important;
+  bottom: -58px !important;
+}
+
+/* Saker kan nu placeras långt ner mot framkanten av sanden. */
+#found-layer,
+#dig-layer {
+  overflow: visible !important;
+}
+
+@media (max-width: 760px) {
+  .sand-bed {
+    height: 190px !important;
+    bottom: -50px !important;
+  }
+}
+
+
+/* ===== v3.33 – hela sandytan är en riktig 2D-yta ===== */
+.tank-item,
+.found-item {
+  pointer-events: auto !important;
+  cursor: grab !important;
+  touch-action: none !important;
+}
+
+.tank-item.dragging,
+.found-item.dragging {
+  cursor: grabbing !important;
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.85))
+    drop-shadow(0 8px 8px rgba(0,0,0,.22)) !important;
+}
+
+/* Mer faktisk yta att placera saker på, även nära framkanten. */
+.sand-bed {
+  left: -18% !important;
+  right: -18% !important;
+  height: 235px !important;
+  bottom: -64px !important;
+  border-radius: 24% 24% 0 0 !important;
+}
+
+@media (max-width: 760px) {
+  .sand-bed {
+    left: -20% !important;
+    right: -20% !important;
+    height: 200px !important;
+    bottom: -56px !important;
+  }
+}
+
+
+/* ===== v3.34 – inget föremål får vara låst till en bottenrad ===== */
+#decor-layer {
+  pointer-events: none !important;
+}
+
+#decor-layer .tank-item {
+  position: absolute !important;
+  pointer-events: auto !important;
+  cursor: grab !important;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  margin: 0 !important;
+}
+
+#decor-layer .tank-item.dragging {
+  cursor: grabbing !important;
+  transition: none !important;
+  filter:
+    drop-shadow(0 0 12px rgba(255,255,255,.9))
+    drop-shadow(0 8px 10px rgba(0,0,0,.25)) !important;
+}
+
+/* Specifika gamla regler får inte hålla dessa i en linje. */
+#decor-layer .cave,
+#decor-layer .shell-item,
+#decor-layer .jar-item {
+  bottom: auto !important;
+}
+
+
+/* ===== v3.35 – mat ska kännas viktig och lätt att klicka ===== */
+.found-item.food-found,
+.live-food.waiting-prey {
+  z-index: 120 !important;
+}
+
+.found-item.food-found:hover,
+.live-food.waiting-prey:hover {
+  filter:
+    drop-shadow(0 0 12px rgba(255,255,255,.95))
+    drop-shadow(0 4px 5px rgba(0,0,0,.2));
+}
+
+
+/* ===== v3.36 – tydlig klickrespons ===== */
+.tank-item:active,
+.found-item:active {
+  filter:
+    drop-shadow(0 0 14px rgba(255,255,255,.95))
+    drop-shadow(0 5px 7px rgba(0,0,0,.2)) !important;
+}
+
+
+/* ===== v3.38 – smycken och andra fynd går att använda ===== */
+
+.octopus-jewelry {
+  position:absolute;
+  pointer-events:none;
+  z-index:140;
+  font-size:26px;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 3px 3px rgba(0,0,0,.2));
+}
+
+.octopus-jewelry.ring-wear {
+  font-size:22px;
+}
+
+.octopus-jewelry.necklace-wear {
+  font-size:30px;
+}
+
+.found-item.usable-found {
+  cursor:pointer;
+}
+
+.found-item.usable-found::after {
+  content:"använd";
+  position:absolute;
+  left:50%;
+  top:-14px;
+  transform:translateX(-50%);
+  font-size:9px;
+  padding:2px 5px;
+  border-radius:8px;
+  color:#174b50;
+  background:rgba(255,255,255,.9);
+}
+
+
+/* ===== v3.39 – inga "använd"-etiketter på fynd ===== */
+.found-item.usable-found::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Behåll bara subtil klickkänsla utan text. */
+.found-item.usable-found {
+  cursor: pointer;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .found-item.usable-found:hover {
+    filter:
+      drop-shadow(0 0 9px rgba(255,255,255,.7))
+      drop-shadow(0 4px 5px rgba(0,0,0,.18));
+  }
+}
+
+
+/* ===== v3.40 – tydligare att maten är viktig utan extra text ===== */
+.found-item.food-found,
+.live-food.waiting-prey {
+  z-index:150 !important;
+}
+
+
+/* ===== v3.41 – ingen text ovanför maten ===== */
+
+/* Ta bort "ät" från matfynd. */
+.found-item.food-found::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ta bort "klicka" från levande byte. */
+.live-food.waiting-prey::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Maten är fortfarande tydligt klickbar genom subtil puls/glöd. */
+.found-item.food-found,
+.live-food.waiting-prey {
+  cursor: pointer;
+}
+
+
+/* ===== v3.42 – lite mer liv i snäckan ===== */
+.tank-item.shell-item.shell-active {
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.55))
+    drop-shadow(0 5px 7px rgba(0,0,0,.16));
+}
+
+
+/* ===== v3.43 – Sims-liknande meny för saker ===== */
+#object-action-menu {
+  position:absolute;
+  z-index:300;
+  min-width:180px;
+  max-width:230px;
+  padding:8px;
+  border-radius:18px;
+  background:rgba(245,255,253,.97);
+  border:2px solid rgba(0,127,122,.45);
+  box-shadow:0 10px 26px rgba(0,0,0,.22);
+  transform:translate(-50%,-100%);
+}
+
+#object-action-menu[hidden] { display:none !important; }
+
+#object-action-menu .action-title {
+  font-weight:800;
+  font-size:13px;
+  color:#005f63;
+  padding:4px 7px 7px;
+  text-align:center;
+}
+
+#object-action-menu .action-grid {
+  display:grid;
+  gap:6px;
+}
+
+#object-action-menu button {
+  border:0;
+  border-radius:12px;
+  padding:9px 10px;
+  font-size:13px;
+  font-weight:700;
+  color:#174b50;
+  background:rgba(99,207,198,.18);
+  cursor:pointer;
+  text-align:left;
+}
+
+#object-action-menu button:hover {
+  background:rgba(99,207,198,.34);
+}
+
+.tank-item.menu-target,
+.found-item.menu-target {
+  filter:
+    drop-shadow(0 0 12px rgba(255,255,255,.95))
+    drop-shadow(0 5px 6px rgba(0,0,0,.18)) !important;
+}
+
+/* Klossar som staplas får lite extra djup. */
+.found-item.block-stacking {
+  transition:left .75s ease, top .75s ease, transform .75s ease !important;
+}
+
+/* Bollkast: tydligare armaktivitet. */
+.octopus-wrap.ball-throwing .arm {
+  animation:v343ThrowArms .55s ease-in-out infinite alternate !important;
+}
+@keyframes v343ThrowArms {
+  from { transform:rotate(-13deg) scaleY(.94); }
+  to   { transform:rotate(16deg) scaleY(1.16); }
+}
+
+
+/* ===== v3.44 – tydligare koja, skal, ring och klosslek ===== */
+
+.octopus-wrap.hidden-in-home {
+  opacity: 0 !important;
+  transform: scale(.16) !important;
+  transition: opacity .55s ease, transform .75s ease !important;
+  pointer-events: none !important;
+}
+
+.octopus-wrap.ring-pass {
+  transition:
+    left 1.1s ease,
+    top 1.1s ease,
+    transform 1.1s ease,
+    opacity .35s ease !important;
+}
+
+.octopus-wrap.ring-pass.behind-ring {
+  z-index: 12 !important;
+  opacity: .76;
+  transform: scale(.72) !important;
+}
+
+.octopus-wrap.ring-pass.front-ring {
+  z-index: 90 !important;
+  opacity: 1;
+  transform: scale(.9) !important;
+}
+
+.found-item.block-gathering {
+  transition: left .9s ease, top .9s ease, transform .9s ease !important;
+}
+
+
+/* ===== v3.45 – menyn måste alltid synas ovanpå akvariet ===== */
+#object-action-menu {
+  display:block;
+  z-index:500 !important;
+  pointer-events:auto !important;
+}
+
+#object-action-menu[hidden] {
+  display:none !important;
+}
+
+#object-action-menu button {
+  pointer-events:auto !important;
+}
+
+
+/* ===== v3.46 – tydlig ring, klosslek och trollstav ===== */
+
+.octopus-wrap.v346-ring-pass {
+  transition: left 1s linear, top 1s linear, transform .8s ease, opacity .35s ease !important;
+}
+.octopus-wrap.v346-ring-small {
+  transform: scale(.5) !important;
+  z-index: 20 !important;
+}
+.octopus-wrap.v346-hooping {
+  animation: v346HoopBody .65s ease-in-out infinite alternate !important;
+}
+@keyframes v346HoopBody {
+  from { transform: rotate(-7deg) scale(.78); }
+  to   { transform: rotate(7deg) scale(.82); }
+}
+
+.tank-item.v346-ring-spin {
+  animation: v346RingSpin .7s linear infinite !important;
+}
+@keyframes v346RingSpin {
+  from { transform:translate(-50%,-50%) rotate(0deg) scale(1); }
+  to   { transform:translate(-50%,-50%) rotate(360deg) scale(1); }
+}
+
+.found-item.v346-block-moving {
+  transition:left .85s ease, top .85s ease !important;
+}
+
+.v346-magic {
+  animation:v346MagicPulse .35s ease-in-out 6 alternate !important;
+}
+@keyframes v346MagicPulse {
+  from { filter:hue-rotate(0deg) saturate(1) brightness(1); transform:scale(1); }
+  to   { filter:hue-rotate(150deg) saturate(1.8) brightness(1.18); transform:scale(1.12); }
+}
+
+#v346-magic-sparkles {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:450;
+}
+#v346-magic-sparkles span {
+  position:absolute;
+  font-size:24px;
+  animation:v346Spark 1.5s ease-out forwards;
+}
+@keyframes v346Spark {
+  from { opacity:0; transform:translateY(15px) scale(.5) rotate(0deg); }
+  20% { opacity:1; }
+  to { opacity:0; transform:translateY(-55px) scale(1.2) rotate(180deg); }
+}
+
+
+/* ===== v3.47 – tydliga Sims-liknande animationer ===== */
+
+#v347-action-layer{
+  position:absolute;
+  inset:0;
+  z-index:220;
+  pointer-events:none;
+}
+
+.v347-prop{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  z-index:225;
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.22));
+}
+
+.v347-ring-prop{
+  width:72px;
+  height:72px;
+  border:9px solid #e7b84c;
+  border-radius:50%;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.28);
+  transition:left .8s ease, top .8s ease, transform .5s ease;
+}
+
+.v347-ring-prop.hoop{
+  animation:v347HoopProp .65s linear infinite;
+}
+@keyframes v347HoopProp{
+  from{transform:translate(-50%,-50%) rotate(0deg) scaleX(1);}
+  50%{transform:translate(-50%,-50%) rotate(180deg) scaleX(.58);}
+  to{transform:translate(-50%,-50%) rotate(360deg) scaleX(1);}
+}
+
+.v347-coin-prop{
+  font-size:34px;
+  transition:left .72s cubic-bezier(.2,.8,.25,1), top .72s cubic-bezier(.2,.8,.25,1), transform .72s linear;
+}
+
+.v347-kelp-prop{
+  font-size:72px;
+  transform-origin:50% 90%;
+}
+.v347-kelp-prop.tug{
+  animation:v347KelpTug .55s ease-in-out infinite alternate;
+}
+@keyframes v347KelpTug{
+  from{transform:translate(-50%,-50%) rotate(-5deg) scaleY(1);}
+  to{transform:translate(-50%,-50%) rotate(11deg) scaleY(1.13);}
+}
+
+.octopus-wrap.v347-pulling .arm{
+  animation:v347PullArm .48s ease-in-out infinite alternate !important;
+}
+@keyframes v347PullArm{
+  from{transform:rotate(-15deg) scaleY(1.02);}
+  to{transform:rotate(18deg) scaleY(1.22);}
+}
+
+.octopus-wrap.v347-throwing .arm{
+  animation:v347ThrowArm .42s ease-in-out infinite alternate !important;
+}
+@keyframes v347ThrowArm{
+  from{transform:rotate(-19deg) scaleY(.95);}
+  to{transform:rotate(23deg) scaleY(1.2);}
+}
+
+.octopus-wrap.v347-squeeze{
+  transition:left .85s linear, top .85s linear, transform .45s ease !important;
+  transform:scale(.46) !important;
+}
+
+.v347-hidden-original{
+  opacity:.08 !important;
+}
+
+
+/* ===== v3.48 – robust ringpassage och synligt tärningskast ===== */
+
+.v348-die-prop{
+  position:absolute;
+  z-index:260;
+  pointer-events:none;
+  font-size:36px;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.22));
+  transition:left .75s cubic-bezier(.2,.8,.25,1),
+             top .75s cubic-bezier(.2,.8,.25,1),
+             transform .75s linear;
+}
+
+.v348-ring-front{
+  z-index:240 !important;
+}
+.v348-ring-back{
+  z-index:30 !important;
+}
+
+.octopus-wrap.v348-ring-through{
+  transition:left .95s linear, top .95s linear, transform .55s ease !important;
+}
+.octopus-wrap.v348-ring-through.v348-compress{
+  transform:scale(.42) !important;
+}
+
+
+/* ===== v3.49 – tärningen ska uppfattas som samma föremål ===== */
+.v348-die-prop{
+  z-index:350 !important;
+}
+
+
+/* ===== v3.50 – färdigheter och inlärning ===== */
+
+#skills-panel {
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(0,127,122,.22);
+}
+
+#skills-panel h3 {
+  margin:0 0 7px;
+  font-size:15px;
+  color:#005f63;
+}
+
+#skills-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.skill-chip {
+  padding:6px 8px;
+  border-radius:12px;
+  font-size:12px;
+  background:rgba(99,207,198,.16);
+  color:#174b50;
+  border:1px solid rgba(0,127,122,.16);
+}
+
+.skill-chip.locked {
+  opacity:.48;
+  filter:grayscale(.8);
+}
+
+.skill-progress-note {
+  margin-top:7px;
+  font-size:11px;
+  color:#547579;
+}
+
+.skill-unlock-pop {
+  position:absolute;
+  left:50%;
+  top:18%;
+  transform:translate(-50%,-50%);
+  z-index:600;
+  max-width:260px;
+  padding:11px 15px;
+  border-radius:16px;
+  background:rgba(246,255,253,.97);
+  border:2px solid rgba(0,127,122,.45);
+  box-shadow:0 9px 22px rgba(0,0,0,.2);
+  font-weight:800;
+  color:#005f63;
+  text-align:center;
+  pointer-events:none;
+  animation:v350SkillPop 3s ease both;
+}
+
+@keyframes v350SkillPop {
+  0% { opacity:0; transform:translate(-50%,-30%) scale(.85); }
+  12%,78% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  100% { opacity:0; transform:translate(-50%,-65%) scale(.95); }
+}
+
+
+/* ===== v3.51 – synlig tråd och verkligt klossbygge ===== */
+
+.v351-thread {
+  position:absolute;
+  z-index:360;
+  width:32px;
+  height:32px;
+  border:4px solid #c65a89;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  box-shadow:0 3px 5px rgba(0,0,0,.18);
+}
+.v351-thread::after {
+  content:"";
+  position:absolute;
+  left:22px;
+  top:14px;
+  width:10px;
+  height:4px;
+  border-radius:4px;
+  background:#c65a89;
+}
+
+.v351-thread-line {
+  position:absolute;
+  height:4px;
+  background:#c65a89;
+  border-radius:4px;
+  transform-origin:left center;
+  z-index:359;
+  pointer-events:none;
+  transition:width .7s ease, transform .7s ease;
+}
+
+.v351-block-prop {
+  position:absolute;
+  z-index:355;
+  font-size:33px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .8s ease, top .8s ease, transform .5s ease;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.18));
+}
+
+.octopus-wrap.v351-building .arm {
+  animation:v351BuildArms .52s ease-in-out infinite alternate !important;
+}
+@keyframes v351BuildArms {
+  from { transform:rotate(-16deg) scaleY(.96); }
+  to   { transform:rotate(18deg) scaleY(1.2); }
+}
+
+
+/* ===== v3.52 – bläckfisken följer med klossarna och bygger på samma plats ===== */
+.octopus-wrap.v352-carrying-blocks .arm {
+  animation:v352Carry .5s ease-in-out infinite alternate !important;
+}
+@keyframes v352Carry {
+  from { transform:rotate(-14deg) scaleY(.98); }
+  to   { transform:rotate(16deg) scaleY(1.18); }
+}
+
+
+/* ===== v3.53 – tydligt dra-i-tråden-nystande ===== */
+
+.v353-thread-ball{
+  position:absolute;
+  z-index:370;
+  width:38px;
+  height:38px;
+  border:5px solid #c65a89;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  box-shadow:0 3px 5px rgba(0,0,0,.18);
+  transition:
+    left .55s ease,
+    top .55s ease,
+    width .7s ease,
+    height .7s ease,
+    border-width .7s ease,
+    transform .55s ease;
+}
+
+.v353-thread-line{
+  position:absolute;
+  z-index:369;
+  height:4px;
+  border-radius:4px;
+  background:#c65a89;
+  transform-origin:left center;
+  pointer-events:none;
+  transition:
+    width .65s ease,
+    transform .65s ease,
+    left .55s ease,
+    top .55s ease;
+}
+
+.octopus-wrap.v353-pulling-thread .arm{
+  animation:v353PullThreadArm .42s ease-in-out infinite alternate !important;
+}
+@keyframes v353PullThreadArm{
+  from{ transform:rotate(-18deg) scaleY(.95); }
+  to{ transform:rotate(22deg) scaleY(1.24); }
+}
+
+
+/* ===== v3.54 – verklig passage genom ringen ===== */
+.octopus-wrap.v354-ring-action {
+  transition:
+    left .9s linear,
+    top .9s linear,
+    transform .6s ease,
+    opacity .3s ease !important;
+}
+
+.octopus-wrap.v354-ring-action.v354-squeezed {
+  transform: translate(-50%,-50%) scale(.36) !important;
+}
+
+.v354-ring {
+  position:absolute;
+  width:78px;
+  height:78px;
+  border:10px solid #e4b54c;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  box-shadow:
+    inset 0 0 0 3px rgba(255,255,255,.32),
+    0 5px 8px rgba(0,0,0,.18);
+}
+
+.v354-ring.hoop {
+  animation:v354Hoop .62s linear infinite;
+}
+
+@keyframes v354Hoop {
+  0%   { transform:translate(-50%,-50%) rotate(0deg) scaleX(1); }
+  25%  { transform:translate(-50%,-50%) rotate(90deg) scaleX(.48); }
+  50%  { transform:translate(-50%,-50%) rotate(180deg) scaleX(1); }
+  75%  { transform:translate(-50%,-50%) rotate(270deg) scaleX(.48); }
+  100% { transform:translate(-50%,-50%) rotate(360deg) scaleX(1); }
+}
+
+
+/* ===== v3.55 – bläckfisken ska vara VID saken när han gör något ===== */
+
+.octopus-wrap.v355-working .arm {
+  animation:v355WorkArms .46s ease-in-out infinite alternate !important;
+}
+@keyframes v355WorkArms {
+  from { transform:rotate(-15deg) scaleY(.97); }
+  to   { transform:rotate(18deg) scaleY(1.18); }
+}
+
+.v355-prop {
+  position:absolute;
+  z-index:360;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  font-size:34px;
+  transition:left .75s ease, top .75s ease, transform .75s ease;
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.2));
+}
+
+.v355-ball-prop {
+  font-size:38px;
+}
+
+.v355-found-prop {
+  font-size:34px;
+}
+
+#traits-panel {
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(0,127,122,.2);
+}
+#traits-panel h3 {
+  margin:0 0 7px;
+  font-size:15px;
+  color:#005f63;
+}
+#traits-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+.trait-chip {
+  padding:6px 8px;
+  border-radius:12px;
+  font-size:12px;
+  background:rgba(240,0,122,.08);
+  border:1px solid rgba(240,0,122,.14);
+  color:#174b50;
+}
+.trait-chip.locked {
+  opacity:.45;
+  filter:grayscale(.75);
+}
+
+
+/* ===== v3.56 – tydligare fysisk interaktion ===== */
+
+.octopus-wrap.v356-approaching .arm {
+  animation:v356ApproachArms .75s ease-in-out infinite alternate !important;
+}
+@keyframes v356ApproachArms {
+  from { transform:rotate(-8deg) scaleY(.97); }
+  to   { transform:rotate(10deg) scaleY(1.12); }
+}
+
+.v356-magic-wave {
+  position:absolute;
+  z-index:520;
+  pointer-events:none;
+  font-size:42px;
+  transform:translate(-50%,-50%);
+  animation:v356MagicWave 2.2s ease-out forwards;
+}
+@keyframes v356MagicWave {
+  0% { opacity:0; transform:translate(-50%,-50%) scale(.4) rotate(0deg); }
+  20% { opacity:1; }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(1.8) rotate(260deg); }
+}
+
+.v356-float {
+  animation:v356Float 1.1s ease-in-out infinite alternate !important;
+}
+@keyframes v356Float {
+  from { transform:translate(-50%,-50%) translateY(0) rotate(-3deg); }
+  to   { transform:translate(-50%,-50%) translateY(-22px) rotate(5deg); }
+}
+
+.v356-big {
+  transform:translate(-50%,-50%) scale(1.45) !important;
+  transition:transform .45s ease !important;
+}
+
+.v356-small {
+  transform:translate(-50%,-50%) scale(.58) !important;
+  transition:transform .45s ease !important;
+}
+
+
+/* ===== v3.57 – verkligare ring, pussel, burk och ny koja ===== */
+
+/* Ny tydlig koja istället för sten-look */
+.tank-item.home-item .emoji { display:none !important; }
+.octo-home {
+  position:relative;
+  width:92px;
+  height:64px;
+  border-radius:46% 46% 28% 28%;
+  background:
+    linear-gradient(155deg,#8a5a3b 0 44%,#5d3929 45% 100%);
+  border:4px solid rgba(67,42,30,.65);
+  box-shadow:0 8px 10px rgba(0,0,0,.2), inset 0 5px 8px rgba(255,255,255,.12);
+}
+.octo-home::before {
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-2px;
+  width:42px;
+  height:42px;
+  transform:translateX(-50%);
+  border-radius:50% 50% 12px 12px;
+  background:#173a3d;
+  box-shadow:inset 0 0 12px rgba(0,0,0,.55);
+}
+.octo-home::after {
+  content:"";
+  position:absolute;
+  left:9px;
+  right:9px;
+  top:-12px;
+  height:22px;
+  border-radius:50%;
+  background:linear-gradient(90deg,#5f7b4f,#7f9a63,#496b42);
+  transform:rotate(-3deg);
+}
+
+/* Ring i två lager så kroppen syns passera genom hålet */
+.v357-ring-back,.v357-ring-front{
+  position:absolute;
+  width:86px;
+  height:86px;
+  border:10px solid #e2b24b;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.v357-ring-back{z-index:55;box-shadow:0 5px 8px rgba(0,0,0,.17);}
+.v357-ring-front{
+  z-index:220;
+  clip-path:polygon(0 48%,100% 48%,100% 100%,0 100%);
+}
+.octopus-wrap.v357-ring-pass{
+  z-index:140 !important;
+  transition:left .9s linear, top .9s linear, transform .5s ease !important;
+}
+.octopus-wrap.v357-ring-pass.v357-squeeze{
+  transform:scale(.34) !important;
+}
+
+/* Pusselbräda */
+#v357-puzzle-board{
+  position:absolute;
+  width:180px;
+  height:120px;
+  z-index:175;
+  border:6px solid #7d5a43;
+  border-radius:12px;
+  overflow:hidden;
+  background:#bfe8ea;
+  box-shadow:0 8px 14px rgba(0,0,0,.22);
+  pointer-events:none;
+}
+#v357-puzzle-board svg{position:absolute;inset:0;width:100%;height:100%;}
+.v357-puzzle-cover{
+  position:absolute;
+  width:33.333%;
+  height:50%;
+  background:#d6bb82;
+  border:1px solid rgba(90,65,45,.35);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.v357-puzzle-cover.revealed{opacity:0;transform:scale(.75);}
+.v357-piece{
+  position:absolute;
+  z-index:240;
+  font-size:34px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .8s ease,top .8s ease,transform .6s ease;
+}
+
+/* Burk med tydligt lock/innehåll */
+.v357-jar{
+  position:absolute;
+  width:66px;
+  height:78px;
+  z-index:190;
+  border:5px solid rgba(225,247,250,.97);
+  border-radius:14px 14px 20px 20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(160,224,231,.14));
+  transform:translate(-50%,-50%);
+  box-shadow:inset 8px 0 12px rgba(255,255,255,.18),0 7px 9px rgba(0,0,0,.18);
+  pointer-events:none;
+}
+.v357-jar-lid{
+  position:absolute;
+  left:50%;
+  top:-14px;
+  width:56px;
+  height:13px;
+  transform:translateX(-50%);
+  border-radius:5px;
+  background:#7c898b;
+  transition:left .7s ease,top .7s ease,transform .7s ease;
+}
+.v357-jar-lid.open{left:112%;top:-31px;transform:translateX(-50%) rotate(58deg);}
+.v357-jar-content{
+  position:absolute;
+  left:50%;
+  top:58%;
+  transform:translate(-50%,-50%);
+  font-size:30px;
+}
+.v357-reward{
+  position:absolute;
+  z-index:260;
+  font-size:32px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .7s ease,top .7s ease,transform .5s ease;
+}
+.octopus-wrap.v357-jar-work .arm{
+  animation:v357JarArms .42s ease-in-out infinite alternate !important;
+}
+@keyframes v357JarArms{
+  from{transform:rotate(-18deg) scaleY(.96);}
+  to{transform:rotate(22deg) scaleY(1.26);}
+}
+
+
+/* ===== v3.58 – färgad tråd + upplåsbara kojor ===== */
+
+.v358-thread-ball{
+  position:absolute;
+  z-index:375;
+  width:40px;
+  height:40px;
+  border:5px solid var(--thread-color,#d95b93);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  box-shadow:0 4px 6px rgba(0,0,0,.18);
+  transition:width .55s ease,height .55s ease,border-width .55s ease,
+             left .55s ease,top .55s ease,transform .55s ease;
+}
+.v358-thread-line{
+  position:absolute;
+  z-index:374;
+  height:4px;
+  border-radius:5px;
+  background:var(--thread-color,#d95b93);
+  transform-origin:left center;
+  pointer-events:none;
+  transition:width .6s ease,transform .6s ease,left .5s ease,top .5s ease;
+}
+.v358-thread-loop{
+  position:absolute;
+  z-index:373;
+  width:70px;
+  height:40px;
+  border:4px solid var(--thread-color,#d95b93);
+  border-radius:50%;
+  transform:translate(-50%,-50%) rotate(18deg);
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .4s ease,transform .6s ease;
+}
+
+/* Kojor */
+.tank-item.home-item .emoji{display:none!important;}
+.octo-home{
+  position:relative;
+  width:96px;
+  height:66px;
+  border-radius:45% 45% 26% 26%;
+  box-shadow:0 8px 12px rgba(0,0,0,.2);
+}
+.octo-home::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-2px;
+  width:42px;
+  height:42px;
+  transform:translateX(-50%);
+  border-radius:50% 50% 12px 12px;
+  background:#173a3d;
+  box-shadow:inset 0 0 12px rgba(0,0,0,.55);
+}
+
+/* enkel */
+.octo-home.style-basic{
+  background:linear-gradient(155deg,#8a5a3b 0 44%,#5d3929 45% 100%);
+  border:4px solid rgba(67,42,30,.65);
+}
+.octo-home.style-basic::after{
+  content:"";
+  position:absolute;left:9px;right:9px;top:-12px;height:22px;
+  border-radius:50%;
+  background:linear-gradient(90deg,#5f7b4f,#7f9a63,#496b42);
+}
+
+/* snäckkoja */
+.octo-home.style-shell{
+  background:linear-gradient(145deg,#d7a987,#bd7d68);
+  border:4px solid #8e5f50;
+  border-radius:58% 42% 38% 28%;
+}
+.octo-home.style-shell::after{
+  content:"🌀";
+  position:absolute;left:16px;top:5px;font-size:34px;opacity:.72;
+}
+
+/* korallkoja */
+.octo-home.style-coral{
+  background:linear-gradient(145deg,#bf7d89,#8d6379);
+  border:4px solid #6d4c63;
+}
+.octo-home.style-coral::after{
+  content:"🪸";
+  position:absolute;left:50%;top:-34px;transform:translateX(-50%);
+  font-size:48px;
+}
+
+/* lyxkoja */
+.octo-home.style-luxury{
+  width:112px;
+  height:76px;
+  background:linear-gradient(145deg,#d8cfb4,#9fc8c0);
+  border:5px solid #b79b4b;
+  border-radius:22px 22px 30px 30px;
+  box-shadow:0 10px 16px rgba(0,0,0,.22),inset 0 0 0 3px rgba(255,255,255,.35);
+}
+.octo-home.style-luxury::after{
+  content:"✨";
+  position:absolute;right:-8px;top:-20px;font-size:28px;
+}
+
+.home-picker{
+  display:grid;
+  gap:6px;
+}
+.home-picker button.locked-home{
+  opacity:.5;
+}
+
+
+/* ===== v3.60 – fler uppdrag och finare belöningar ===== */
+
+#v360-quest-panel{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(0,127,122,.22);
+}
+#v360-quest-panel h3{
+  margin:0 0 7px;
+  font-size:15px;
+  color:#005f63;
+}
+.v360-quest{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:3px 8px;
+  padding:7px 0;
+  border-bottom:1px solid rgba(0,95,99,.09);
+  font-size:12px;
+}
+.v360-quest:last-child{border-bottom:0}
+.v360-quest-title{font-weight:800;color:#174b50}
+.v360-quest-reward{font-size:11px;color:#8a4a68}
+.v360-quest-progress{font-size:11px;color:#55787b}
+.v360-done{
+  opacity:.58;
+}
+.v360-done .v360-quest-title::before{
+  content:"✓ ";
+  color:#007f7a;
+}
+.v360-reward-pop{
+  position:absolute;
+  left:50%;
+  top:24%;
+  z-index:650;
+  transform:translate(-50%,-50%);
+  padding:13px 17px;
+  border-radius:18px;
+  background:rgba(255,255,255,.98);
+  border:2px solid #d3a84b;
+  box-shadow:0 10px 28px rgba(0,0,0,.24);
+  text-align:center;
+  font-weight:900;
+  color:#005f63;
+  pointer-events:none;
+  animation:v360Reward 3.8s ease both;
+}
+@keyframes v360Reward{
+  0%{opacity:0;transform:translate(-50%,-30%) scale(.82)}
+  12%,78%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+  100%{opacity:0;transform:translate(-50%,-67%) scale(.94)}
+}
+
+/* extra lyxiga kojor */
+.octo-home.style-pearl{
+  width:116px;
+  height:78px;
+  background:linear-gradient(145deg,#fff9ef,#dbeaf0 52%,#d2c2e8);
+  border:5px solid #c6b46b;
+  border-radius:52% 52% 28% 28%;
+  box-shadow:0 10px 18px rgba(0,0,0,.22),inset 0 0 0 4px rgba(255,255,255,.55);
+}
+.octo-home.style-pearl::after{
+  content:"● ● ●";
+  position:absolute;
+  top:-18px;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff7e8;
+  text-shadow:0 1px 2px rgba(0,0,0,.22);
+  letter-spacing:5px;
+}
+
+.octo-home.style-palace{
+  width:126px;
+  height:84px;
+  background:linear-gradient(150deg,#8fd0c9,#d9efe9 55%,#d1a85a);
+  border:5px solid #a7833e;
+  border-radius:20px 20px 34px 34px;
+  box-shadow:0 12px 20px rgba(0,0,0,.24),inset 0 0 0 4px rgba(255,255,255,.38);
+}
+.octo-home.style-palace::after{
+  content:"♛";
+  position:absolute;
+  top:-29px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:32px;
+  color:#d8b756;
+  text-shadow:0 2px 3px rgba(0,0,0,.2);
+}
+
+
+/* ===== v3.62 – fysisk närvaro + finare leksaker ===== */
+
+.v362-near-action .arm{
+  animation:v362NearArms .45s ease-in-out infinite alternate !important;
+}
+@keyframes v362NearArms{
+  from{transform:rotate(-14deg) scaleY(.98);}
+  to{transform:rotate(18deg) scaleY(1.20);}
+}
+
+#v362-toy-panel{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:16px;
+  background:rgba(255,255,255,.74);
+  border:1px solid rgba(0,127,122,.2);
+}
+#v362-toy-panel h3{
+  margin:0 0 7px;
+  font-size:15px;
+  color:#005f63;
+}
+.v362-toy-row{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  padding:6px 0;
+  border-bottom:1px solid rgba(0,95,99,.08);
+  font-size:12px;
+}
+.v362-toy-row:last-child{border-bottom:0}
+.v362-locked{opacity:.45}
+
+.v362-glitter-ball{
+  filter:drop-shadow(0 0 8px rgba(255,255,255,.9))
+         drop-shadow(0 0 12px rgba(91,221,215,.6));
+}
+.v362-bubble-ring{
+  filter:drop-shadow(0 0 9px rgba(116,226,255,.8));
+}
+.v362-lux-block{
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.75));
+}
+
+
+/* ===== v3.63 – verkligare ätande och ringpassage ===== */
+
+.v363-food-prop{
+  position:absolute;
+  z-index:360;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  font-size:32px;
+  transition:left .6s ease,top .6s ease,transform .45s ease,opacity .35s ease;
+}
+
+.octopus-wrap.v363-eating .arm{
+  animation:v363EatArms .42s ease-in-out infinite alternate !important;
+}
+@keyframes v363EatArms{
+  from{transform:rotate(-14deg) scaleY(.98);}
+  to{transform:rotate(18deg) scaleY(1.20);}
+}
+
+.octopus-wrap.v363-mouth-open .mouth{
+  transform:scale(1.35);
+}
+
+.v363-ring-stage{
+  position:absolute;
+  width:170px;
+  height:170px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  z-index:135;
+}
+.v363-ring-back,
+.v363-ring-front{
+  position:absolute;
+  inset:0;
+  border:14px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+  filter:drop-shadow(0 5px 6px rgba(0,0,0,.18));
+}
+.v363-ring-back{z-index:1;}
+.v363-ring-front{
+  z-index:4;
+  clip-path:polygon(0 50%,100% 50%,100% 100%,0 100%);
+}
+.octopus-wrap.v363-ring-swim{
+  z-index:138 !important;
+  transition:left .85s linear !important,top .85s linear !important,transform .55s ease !important;
+}
+.octopus-wrap.v363-ring-swim.v363-ring-squeeze{
+  transform:translate(-50%,-50%) scale(.48) !important;
+}
+
+
+/* ===== v3.64 – riktig spegelinteraktion ===== */
+
+.v364-mirror-prop{
+  position:absolute;
+  z-index:365;
+  width:72px;
+  height:92px;
+  border-radius:46% 46% 42% 42%;
+  border:6px solid #8ea3ad;
+  background:linear-gradient(145deg,#dff7fb,#9fc7d4 48%,#dff7fb 70%,#7ba5b3);
+  box-shadow:0 7px 12px rgba(0,0,0,.22), inset 0 0 12px rgba(255,255,255,.55);
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  overflow:hidden;
+  transition:left .65s ease, top .65s ease, transform .5s ease;
+}
+
+.v364-reflection{
+  position:absolute;
+  left:50%;
+  top:52%;
+  width:54px;
+  height:54px;
+  transform:translate(-50%,-50%) scaleX(-1);
+  opacity:.72;
+  filter:saturate(.8) brightness(1.15);
+  pointer-events:none;
+}
+
+.v364-reflection-head{
+  position:absolute;
+  left:50%;
+  top:10px;
+  width:28px;
+  height:26px;
+  transform:translateX(-50%);
+  border-radius:48% 48% 42% 42%;
+  background:#8e6ac7;
+}
+
+.v364-reflection-head::before,
+.v364-reflection-head::after{
+  content:"";
+  position:absolute;
+  top:8px;
+  width:6px;
+  height:7px;
+  border-radius:50%;
+  background:#142f35;
+}
+.v364-reflection-head::before{left:6px}
+.v364-reflection-head::after{right:6px}
+
+.v364-reflection-arms{
+  position:absolute;
+  left:50%;
+  top:28px;
+  width:50px;
+  height:22px;
+  transform:translateX(-50%);
+}
+.v364-reflection-arms::before{
+  content:"〰 〰 〰 〰";
+  position:absolute;
+  left:50%;
+  top:-2px;
+  transform:translateX(-50%);
+  font-size:13px;
+  letter-spacing:-2px;
+  color:#8e6ac7;
+  white-space:nowrap;
+}
+
+.octopus-wrap.v364-looking-mirror .arm{
+  animation:v364MirrorArms .6s ease-in-out infinite alternate !important;
+}
+@keyframes v364MirrorArms{
+  from{transform:rotate(-8deg) scaleY(.98);}
+  to{transform:rotate(10deg) scaleY(1.10);}
+}
+
+
+/* ===== v3.65 – "Bygg ett hem" öppnas utanför akvariet ===== */
+
+#v365-home-builder{
+  position:fixed;
+  right:24px;
+  top:90px;
+  z-index:1200;
+  width:min(330px,calc(100vw - 32px));
+  max-height:calc(100vh - 120px);
+  overflow:auto;
+  background:rgba(250,255,254,.98);
+  border:2px solid rgba(0,127,122,.28);
+  border-radius:22px;
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+  padding:16px;
+  backdrop-filter:blur(8px);
+}
+#v365-home-builder[hidden]{display:none!important;}
+
+.v365-home-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+.v365-home-head h3{
+  margin:0;
+  color:#005f63;
+  font-size:20px;
+}
+.v365-home-close{
+  border:0;
+  background:transparent;
+  font-size:24px;
+  cursor:pointer;
+  line-height:1;
+  color:#315f63;
+}
+.v365-home-sub{
+  margin:0 0 12px;
+  color:#496d70;
+  font-size:13px;
+}
+.v365-home-grid{
+  display:grid;
+  gap:9px;
+}
+.v365-home-option{
+  width:100%;
+  text-align:left;
+  border:1px solid rgba(0,127,122,.18);
+  background:#fff;
+  border-radius:15px;
+  padding:11px 12px;
+  cursor:pointer;
+  display:grid;
+  grid-template-columns:40px 1fr;
+  gap:10px;
+  align-items:center;
+}
+.v365-home-option:hover{
+  transform:translateY(-1px);
+  box-shadow:0 7px 15px rgba(0,0,0,.08);
+}
+.v365-home-option.locked{
+  opacity:.5;
+  cursor:not-allowed;
+}
+.v365-home-icon{
+  font-size:28px;
+  text-align:center;
+}
+.v365-home-name{
+  font-weight:800;
+  color:#174b50;
+}
+.v365-home-info{
+  font-size:11px;
+  color:#6a8587;
+  margin-top:2px;
+}
+
+@media (max-width:800px){
+  #v365-home-builder{
+    left:16px;
+    right:16px;
+    top:auto;
+    bottom:16px;
+    width:auto;
+    max-height:55vh;
+  }
+}
+
+
+/* ===== v3.66 – bläckfisken stannar vid burken och armarna går ner i den ===== */
+
+.v366-jar-arm{
+  position:absolute;
+  z-index:250;
+  height:8px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#8e6ac7,#a984da);
+  transform-origin:left center;
+  pointer-events:none;
+  box-shadow:0 2px 3px rgba(0,0,0,.15);
+  transition:width .55s ease,transform .55s ease,left .35s ease,top .35s ease,opacity .35s ease;
+}
+
+.v366-jar-arm::after{
+  content:"";
+  position:absolute;
+  right:-5px;
+  top:50%;
+  width:10px;
+  height:10px;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:#a984da;
+}
+
+.v366-arm1{ transform:rotate(8deg); }
+.v366-arm2{ transform:rotate(-5deg); }
+
+.v366-jar-reward{
+  position:absolute;
+  z-index:270;
+  font-size:34px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .65s ease,top .65s ease,transform .45s ease,opacity .35s ease;
+}
+
+.octopus-wrap.v366-at-jar{
+  z-index:210 !important;
+}
+
+
+/* ===== v3.67 – uppdrag visas i etapper istället för alla på en gång ===== */
+
+#v367-quest-tabs{
+  display:flex;
+  gap:6px;
+  margin:8px 0 10px;
+  flex-wrap:wrap;
+}
+#v367-quest-tabs button{
+  border:1px solid rgba(0,127,122,.18);
+  background:#fff;
+  color:#174b50;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:11px;
+  cursor:pointer;
+}
+#v367-quest-tabs button.active{
+  background:rgba(99,207,198,.22);
+  border-color:rgba(0,127,122,.35);
+  font-weight:800;
+}
+.v367-locked-quest{
+  opacity:.52;
+}
+.v367-quest-hint{
+  grid-column:1 / -1;
+  font-size:10px;
+  color:#6f7f81;
+  margin-top:2px;
+}
+
+
+/* ===== v3.72 – BYGG OM: alla upplåsbara saker samlade på ett ställe ===== */
+
+#v372-build-panel{
+  position:fixed;
+  right:24px;
+  top:78px;
+  z-index:1300;
+  width:min(370px,calc(100vw - 32px));
+  max-height:calc(100vh - 105px);
+  overflow:auto;
+  padding:16px;
+  border-radius:22px;
+  background:rgba(250,255,254,.985);
+  border:2px solid rgba(0,127,122,.26);
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
+  backdrop-filter:blur(8px);
+}
+#v372-build-panel[hidden]{display:none!important;}
+
+.v372-build-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+.v372-build-head h3{margin:0;color:#005f63;font-size:20px;}
+.v372-close{
+  border:0;background:transparent;font-size:25px;cursor:pointer;color:#315f63;
+}
+.v372-tabs{
+  display:flex;
+  gap:6px;
+  margin:12px 0;
+  flex-wrap:wrap;
+}
+.v372-tabs button{
+  border:1px solid rgba(0,127,122,.18);
+  background:#fff;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:11px;
+  cursor:pointer;
+}
+.v372-tabs button.active{
+  font-weight:800;
+  background:rgba(99,207,198,.22);
+}
+.v372-grid{display:grid;gap:8px;}
+.v372-card{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:10px;
+  width:100%;
+  align-items:center;
+  padding:10px 12px;
+  border:1px solid rgba(0,127,122,.16);
+  border-radius:15px;
+  background:#fff;
+  text-align:left;
+  cursor:pointer;
+}
+.v372-card.locked{opacity:.45;cursor:not-allowed;}
+.v372-icon{font-size:30px;text-align:center;}
+.v372-name{font-weight:800;color:#174b50;}
+.v372-info{font-size:11px;color:#6a8587;margin-top:2px;}
+
+@media(max-width:800px){
+  #v372-build-panel{
+    left:16px;right:16px;top:auto;bottom:16px;width:auto;max-height:60vh;
+  }
+}
+
+/* burkvarianter */
+.v357-jar.jar-basic{border-color:rgba(225,247,250,.97);}
+.v357-jar.jar-color{
+  border-color:#72cfd0;
+  box-shadow:inset 8px 0 12px rgba(255,255,255,.2),0 0 14px rgba(83,203,204,.45);
+}
+.v357-jar.jar-pearl{
+  border-color:#f6e6c9;
+  background:linear-gradient(135deg,rgba(255,255,255,.5),rgba(213,193,231,.22));
+  box-shadow:inset 8px 0 12px rgba(255,255,255,.28),0 0 16px rgba(232,216,183,.65);
+}
+.v357-jar.jar-luxury{
+  border-color:#c8a64f;
+  background:linear-gradient(145deg,rgba(255,255,255,.5),rgba(150,218,210,.25));
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.3),0 0 18px rgba(201,170,75,.55);
+}
+
+
+/* ===== v3.74 – smycket bärs faktiskt runt halsen ===== */
+
+.v374-necklace{
+  position:absolute;
+  left:50%;
+  top:38%;
+  width:44px;
+  height:24px;
+  transform:translate(-50%,-50%);
+  z-index:45;
+  pointer-events:none;
+}
+
+.v374-necklace-chain{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:38px;
+  height:20px;
+  transform:translateX(-50%);
+  border:3px solid #d9c37c;
+  border-top:0;
+  border-radius:0 0 50% 50%;
+  box-sizing:border-box;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.18));
+}
+
+.v374-necklace-gem{
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  transform:translateX(-50%);
+  font-size:18px;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));
+}
+
+.octopus-wrap.v374-putting-on-necklace .arm{
+  animation:v374JewelryArms .5s ease-in-out infinite alternate !important;
+}
+@keyframes v374JewelryArms{
+  from{ transform:rotate(-12deg) scaleY(.98); }
+  to{ transform:rotate(15deg) scaleY(1.18); }
+}
+
+
+/* ===== v3.75 – en boll i taget + halsband som verkligen sitter runt halsen ===== */
+
+/* Halsbandet ska ligga tätt runt halsområdet, inte visa hela smycket som en stor symbol. */
+.v375-necklace{
+  position:absolute;
+  left:50%;
+  top:37%;
+  width:42px;
+  height:22px;
+  transform:translate(-50%,-50%);
+  z-index:46;
+  pointer-events:none;
+}
+
+.v375-necklace-chain{
+  position:absolute;
+  left:50%;
+  top:1px;
+  width:36px;
+  height:18px;
+  transform:translateX(-50%);
+  border-left:3px solid #d7c27a;
+  border-right:3px solid #d7c27a;
+  border-bottom:3px solid #d7c27a;
+  border-radius:0 0 50% 50%;
+  box-sizing:border-box;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.18));
+}
+
+/* Bara ett litet hänge syns – inte hela emoji-smycket. */
+.v375-necklace-pendant{
+  position:absolute;
+  left:50%;
+  bottom:-3px;
+  width:9px;
+  height:9px;
+  transform:translateX(-50%) rotate(45deg);
+  background:#83d6d2;
+  border:1px solid rgba(255,255,255,.85);
+  box-shadow:0 1px 3px rgba(0,0,0,.25);
+}
+
+.v375-necklace.pearl .v375-necklace-chain{
+  border-color:#f2efe4;
+}
+.v375-necklace.pearl .v375-necklace-pendant{
+  border-radius:50%;
+  transform:translateX(-50%);
+  background:#fffaf1;
+}
+
+.v375-ball-prop{
+  position:absolute;
+  z-index:365;
+  font-size:38px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .6s ease, top .6s ease, transform .55s linear;
+}
+
+
+/* ===== v3.76 – halsbandet är fast på kroppen, inte en lös sak ovanpå ===== */
+
+/* Gamla HTML-halsband ska aldrig synas. */
+.v374-necklace,
+.v375-necklace{
+  display:none !important;
+}
+
+/* Halsbandet ligger INNE i själva SVG-bläckfisken. */
+#v376-necklace-svg{
+  cursor:pointer;
+  pointer-events:all;
+}
+
+#v376-necklace-hit{
+  fill:none;
+  stroke:transparent;
+  stroke-width:22;
+  pointer-events:stroke;
+}
+
+#v376-necklace-chain{
+  fill:none;
+  stroke:#dfc879;
+  stroke-width:5;
+  stroke-linecap:round;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.18));
+}
+
+#v376-necklace-chain.pearl{
+  stroke:#fff6df;
+  stroke-width:7;
+  stroke-dasharray:1 9;
+  stroke-linecap:round;
+}
+
+#v376-necklace-pendant{
+  fill:#79d4d1;
+  stroke:#f7ffff;
+  stroke-width:2;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));
+}
+
+
+/* ===== v3.78 – olika smycken, varierade klossar, unika specialfynd ===== */
+
+#v376-necklace-chain.gold{stroke:#d8b04a;}
+#v376-necklace-chain.silver{stroke:#c8d4da;}
+#v376-necklace-chain.pearl{
+  stroke:#fff6df;
+  stroke-width:7;
+  stroke-dasharray:1 9;
+}
+#v376-necklace-chain.coral{stroke:#de7f78;}
+#v376-necklace-chain.turquoise{stroke:#55c8c3;}
+
+#v376-necklace-pendant.ruby{fill:#d74461;}
+#v376-necklace-pendant.sapphire{fill:#4b78d4;}
+#v376-necklace-pendant.emerald{fill:#54a76b;}
+#v376-necklace-pendant.amethyst{fill:#8d62bd;}
+#v376-necklace-pendant.turquoise{fill:#49c4c1;}
+#v376-necklace-pendant.pearl{fill:#fff9ec;}
+
+
+/* =========================================================
+   TIDVATTENPÖLEN v4.0 – REN KOD
+   ========================================================= */
+
+.quick-actions{display:none!important;}
+
+.v4-object{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  border:0;
+  background:transparent;
+  padding:0;
+  cursor:pointer;
+  z-index:28;
+  user-select:none;
+  touch-action:none;
+}
+.v4-object .v4-emoji{
+  display:block;
+  font-size:42px;
+  filter:drop-shadow(0 4px 4px rgba(0,0,0,.22));
+}
+.v4-object.v4-kelp .v4-emoji{font-size:58px}
+.v4-object.v4-home .v4-emoji{font-size:58px}
+.v4-object.v4-jar .v4-emoji{font-size:48px}
+.v4-object.v4-found .v4-emoji{font-size:33px}
+.v4-object.v4-block .v4-emoji{font-size:31px}
+
+.v4-food{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  border:0;
+  background:transparent;
+  font-size:35px;
+  cursor:pointer;
+  z-index:40;
+  animation:v4FoodBob 1.3s ease-in-out infinite alternate;
+}
+@keyframes v4FoodBob{
+  from{transform:translate(-50%,-50%) translateY(0)}
+  to{transform:translate(-50%,-50%) translateY(-6px)}
+}
+
+#v4-action-menu{
+  position:absolute;
+  z-index:900;
+  min-width:180px;
+  max-width:230px;
+  padding:8px;
+  border-radius:16px;
+  background:rgba(251,255,254,.98);
+  border:1px solid rgba(0,127,122,.24);
+  box-shadow:0 12px 28px rgba(0,0,0,.24);
+}
+#v4-action-menu[hidden]{display:none!important}
+#v4-action-menu strong{
+  display:block;
+  padding:5px 7px 7px;
+  color:#005f63;
+  font-size:13px;
+}
+#v4-action-menu button{
+  width:100%;
+  margin:3px 0;
+  border:0;
+  border-radius:11px;
+  padding:8px 9px;
+  background:#eaf8f6;
+  color:#174b50;
+  text-align:left;
+  cursor:pointer;
+  font-size:12px;
+}
+#v4-action-menu button:hover{background:#d9f2ef}
+
+.v4-prop{
+  position:absolute;
+  z-index:340;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .65s ease,top .65s ease,transform .55s ease,opacity .35s ease;
+}
+.v4-prop-emoji{
+  font-size:38px;
+  filter:drop-shadow(0 4px 5px rgba(0,0,0,.2));
+}
+.v4-ring{
+  width:92px;height:92px;
+  border:12px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+}
+.v4-ring-front{
+  position:absolute;inset:-12px;
+  border:12px solid #e4b44c;
+  border-radius:50%;
+  clip-path:polygon(0 50%,100% 50%,100% 100%,0 100%);
+  z-index:4;
+}
+.v4-ring-back{
+  position:absolute;inset:-12px;
+  border:12px solid #e4b44c;
+  border-radius:50%;
+  z-index:1;
+}
+.v4-mirror{
+  width:72px;height:92px;
+  border-radius:48%;
+  border:6px solid #8ea3ad;
+  background:linear-gradient(145deg,#e5fbff,#9ec5d1 50%,#dff7fb);
+  overflow:hidden;
+}
+.v4-reflection{
+  position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%) scaleX(-1);
+  width:44px;height:46px;opacity:.72;
+}
+.v4-reflection::before{
+  content:"";
+  position:absolute;left:50%;top:1px;transform:translateX(-50%);
+  width:26px;height:28px;border-radius:50%;
+  background:#d96375;
+}
+.v4-reflection::after{
+  content:"〰〰〰";
+  position:absolute;left:50%;top:26px;transform:translateX(-50%);
+  color:#a34b68;font-size:17px;white-space:nowrap;
+}
+
+.v4-thread-ball{
+  width:38px;height:38px;border-radius:50%;
+  border:5px solid var(--thread,#d95b93);
+}
+.v4-thread-line{
+  position:absolute;height:4px;border-radius:999px;
+  background:var(--thread,#d95b93);
+  transform-origin:left center;
+  transition:width .55s ease,transform .55s ease;
+}
+
+.v4-jar-visual{
+  width:66px;height:78px;
+  border:5px solid rgba(225,247,250,.97);
+  border-radius:14px 14px 20px 20px;
+  background:rgba(170,225,232,.18);
+  box-shadow:inset 7px 0 10px rgba(255,255,255,.22),0 7px 10px rgba(0,0,0,.18);
+}
+.v4-jar-lid{
+  position:absolute;left:50%;top:-14px;
+  width:55px;height:13px;transform:translateX(-50%);
+  border-radius:5px;background:#7c898b;
+  transition:left .6s ease,top .6s ease,transform .6s ease;
+}
+.v4-jar-lid.open{left:112%;top:-32px;transform:translateX(-50%) rotate(60deg)}
+.v4-jar-content{
+  position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);
+  font-size:29px;
+}
+.v4-jar-arm{
+  position:absolute;height:8px;border-radius:999px;
+  background:#a34b68;
+  transform-origin:left center;
+  z-index:360;
+  transition:width .55s ease,transform .55s ease;
+}
+
+.v4-necklace{
+  pointer-events:all;
+  cursor:pointer;
+}
+.v4-necklace-chain{
+  fill:none;
+  stroke-width:5;
+  stroke-linecap:round;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.2));
+}
+.v4-necklace-hit{fill:none;stroke:transparent;stroke-width:24;pointer-events:stroke}
+.v4-necklace-gem{stroke:#fff;stroke-width:1.5}
+
+.v4-build-tabs,.v4-quest-tabs{
+  display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px;
+}
+.v4-build-tabs button,.v4-quest-tabs button{
+  border:1px solid rgba(0,127,122,.18);
+  background:#fff;border-radius:999px;padding:7px 10px;cursor:pointer;
+}
+.v4-build-tabs button.active,.v4-quest-tabs button.active{
+  background:#dff4f1;font-weight:800;
+}
+.v4-build-card,.v4-quest-card{
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  gap:8px;align-items:center;
+  border:1px solid rgba(0,127,122,.14);
+  border-radius:14px;padding:9px 10px;margin:7px 0;
+  background:#fff;
+}
+.v4-build-card button{
+  border:0;border-radius:10px;padding:7px 9px;background:#eaf8f6;cursor:pointer;
+}
+.v4-locked{opacity:.45}
+.v4-small{font-size:11px;color:#668083;margin-top:2px}
+.v4-done{opacity:.58}
+.v4-done .v4-qtitle::before{content:"✓ ";color:#007f7a}
+
+.v4-status-panel{
+  margin-top:10px;padding:10px 12px;border-radius:15px;
+  background:rgba(255,255,255,.72);border:1px solid rgba(0,127,122,.16);
+}
+.v4-chip-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.v4-chip{font-size:11px;padding:5px 7px;border-radius:999px;background:#eaf8f6;color:#315d60}
+
+.octopus-wrap.v4-working .arm{animation:v4Arms .45s ease-in-out infinite alternate}
+@keyframes v4Arms{
+  from{transform:rotate(-13deg) scaleY(.98)}
+  to{transform:rotate(17deg) scaleY(1.18)}
+}
+.octopus-wrap.v4-squeeze{
+  transform:translate(-50%,-50%) scale(.35)!important;
+}
+
+
+/* =========================================================
+   v4.1 – klick, drag och sand fix
+   ========================================================= */
+
+/* Lager får vara transparenta för klick, men själva objekten måste vara klickbara. */
+#decor-layer,
+#food-layer{
+  pointer-events:none !important;
+}
+
+#decor-layer .v4-object,
+#food-layer .v4-food{
+  pointer-events:auto !important;
+}
+
+/* Menyn ska alltid ligga över akvariet och vara klickbar. */
+#v4-action-menu{
+  pointer-events:auto !important;
+  z-index:1200 !important;
+}
+
+/* Föremål måste kunna både klickas och dras. */
+.v4-object{
+  pointer-events:auto !important;
+  touch-action:none !important;
+  cursor:grab !important;
+}
+
+.v4-object:active{
+  cursor:grabbing !important;
+}
+
+/* Bara den synliga sandytan ska starta grävning. */
+.sand-bed{
+  pointer-events:auto !important;
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   v4.3 – olika smycken, stängbart pussel, riktig spegelbild
+   ========================================================= */
+
+#v4-puzzle-board{
+  box-shadow:0 10px 28px rgba(0,0,0,.22);
+}
+
+#v4-puzzle-close{
+  position:absolute;
+  right:6px;
+  top:6px;
+  z-index:30;
+  width:28px;
+  height:28px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.95);
+  color:#174b50;
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+
+#v4-puzzle-reopen{
+  position:absolute;
+  left:58%;
+  top:73%;
+  transform:translate(-50%,-50%);
+  z-index:61;
+  border:0;
+  border-radius:999px;
+  padding:8px 11px;
+  background:rgba(255,255,255,.94);
+  color:#174b50;
+  cursor:pointer;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+  font-size:12px;
+}
+
+.v43-mirror{
+  width:92px;
+  height:118px;
+  border-radius:48%;
+  border:7px solid #899da7;
+  background:linear-gradient(145deg,#e8fbff,#a9ced8 52%,#e9fbff);
+  overflow:hidden;
+}
+
+.v43-mirror-reflection{
+  position:absolute;
+  left:50%;
+  top:52%;
+  width:115px;
+  height:115px;
+  transform:translate(-50%,-50%) scaleX(-.46) scaleY(.46);
+  transform-origin:center;
+  opacity:.8;
+  pointer-events:none;
+}
+
+.v43-mirror-reflection .octopus-svg{
+  width:100%;
+  height:100%;
+}
+
+
+/* =========================================================
+   v4.4 – Bygg om ska stanna öppet och val ska synas tydligt
+   ========================================================= */
+
+.v44-added{
+  outline:2px solid rgba(0,127,122,.35);
+  background:#eefbf9!important;
+}
+
+#v44-build-message{
+  margin:8px 0 2px;
+  min-height:20px;
+  color:#075f67;
+  font-size:12px;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   v4.6 – klappa bläckfisken
+   ========================================================= */
+
+#octopus{
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+
+#octopus.v46-petted{
+  animation:v46PetReaction .7s ease;
+}
+
+@keyframes v46PetReaction{
+  0%{filter:none}
+  35%{filter:brightness(1.12)}
+  70%{filter:none}
+}
+
+
+/* =========================================================
+   v4.7 – tydliga bilder/ikoner på behovsstaplarna
+   ========================================================= */
+
+.need-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.v47-need-label{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  min-width:0;
+}
+
+.v47-need-icon{
+  width:30px;
+  height:30px;
+  flex:0 0 30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 2px 7px rgba(0,0,0,.12);
+  font-size:19px;
+  line-height:1;
+}
+
+.v47-need-name{
+  font-weight:800;
+}
+
+/* Ikonen ska vara begriplig även när texten är svår att läsa. */
+.need[data-need="hunger"] .v47-need-icon{font-size:21px}
+.need[data-need="energy"] .v47-need-icon{font-size:20px}
+.need[data-need="safety"] .v47-need-icon{font-size:19px}
+.need[data-need="stimulation"] .v47-need-icon{font-size:19px}
+.need[data-need="mood"] .v47-need-icon{font-size:20px}
+
+
+/* =========================================================
+   v4.8 – gömma sig bakom alger + roligare sandfynd
+   ========================================================= */
+
+.v48-kelp-front{
+  z-index:500 !important;
+}
+
+.v48-hidden-behind-kelp{
+  z-index:120 !important;
+  filter:brightness(.9);
+}
+
+
+/* =========================================================
+   v4.9 – EN ring, tydligt hål och fler leksaksaktiviteter
+   ========================================================= */
+
+/* Själva ringen ska se ut som EN ring, inte två överlagrade ringar. */
+.v49-ring{
+  width:104px;
+  height:104px;
+  border:13px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+  background:transparent;
+  position:absolute;
+  overflow:visible;
+}
+
+/* Bakre halvan av ringen ligger bakom bläckfisken. */
+.v49-ring-back{
+  position:absolute;
+  inset:-13px;
+  border:13px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+  clip-path:polygon(0 0,100% 0,100% 52%,0 52%);
+  z-index:1;
+}
+
+/* Främre halvan täcker kroppen när den passerar igenom hålet. */
+.v49-ring-front{
+  position:absolute;
+  inset:-13px;
+  border:13px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+  clip-path:polygon(0 48%,100% 48%,100% 100%,0 100%);
+  z-index:420;
+  pointer-events:none;
+}
+
+.v49-ring-hole{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:68px;
+  height:68px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:transparent;
+  z-index:2;
+  pointer-events:none;
+}
+
+.v49-toy-prop{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  z-index:340;
+  pointer-events:none;
+  transition:left .6s ease,top .6s ease,transform .5s ease;
+}
+
+
+/* =========================================================
+   v5.0 – tillväxtkalas när bläckfisken blir större
+   ========================================================= */
+
+#v50-growth-party{
+  position:absolute;
+  inset:0;
+  z-index:1500;
+  display:grid;
+  place-items:center;
+  background:rgba(7,58,67,.26);
+  backdrop-filter:blur(2px);
+  pointer-events:auto;
+}
+
+#v50-growth-party[hidden]{
+  display:none!important;
+}
+
+.v50-party-card{
+  width:min(86%,440px);
+  padding:26px 24px 22px;
+  text-align:center;
+  border-radius:26px;
+  background:linear-gradient(145deg,#fffdf6,#e9faf7);
+  box-shadow:0 18px 50px rgba(0,0,0,.28);
+  border:3px solid rgba(0,175,168,.35);
+}
+
+.v50-party-icons{
+  font-size:42px;
+  letter-spacing:8px;
+  margin-bottom:10px;
+}
+
+.v50-party-card h2{
+  margin:0 0 8px;
+  color:#005f63;
+  font-size:28px;
+}
+
+.v50-party-card p{
+  margin:5px 0;
+  color:#315d60;
+}
+
+.v50-party-card button{
+  margin-top:16px;
+  border:0;
+  border-radius:999px;
+  padding:10px 18px;
+  color:#fff;
+  background:linear-gradient(135deg,#f0007a,#007f7a);
+  font-weight:800;
+  cursor:pointer;
+}
+
+.v50-confetti{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+
+.v50-confetti span{
+  position:absolute;
+  top:-10%;
+  font-size:20px;
+  animation:v50Fall 2.8s linear forwards;
+}
+
+@keyframes v50Fall{
+  to{
+    transform:translateY(115vh) rotate(720deg);
+    opacity:.9;
+  }
+}
+
+#octopus.v50-grow-pop{
+  animation:v50GrowPop 1.2s ease;
+}
+
+@keyframes v50GrowPop{
+  0%{filter:brightness(1)}
+  35%{filter:brightness(1.28)}
+  60%{filter:brightness(1.05)}
+  100%{filter:brightness(1)}
+}
+
+
+/* =========================================================
+   v5.1 – kompisar, disco och musik vid tillväxtkalas
+   ========================================================= */
+
+#v51-party-scene{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:20;
+}
+
+.v51-disco-light{
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  opacity:.28;
+  filter:blur(16px);
+  animation:v51DiscoPulse .75s ease-in-out infinite alternate;
+}
+
+.v51-disco-light.a{left:4%;top:10%;background:#ff3ba7}
+.v51-disco-light.b{right:5%;top:18%;background:#28d9d1;animation-delay:.2s}
+.v51-disco-light.c{left:35%;bottom:5%;background:#ffd94c;animation-delay:.38s}
+
+@keyframes v51DiscoPulse{
+  from{transform:scale(.75);opacity:.18}
+  to{transform:scale(1.28);opacity:.42}
+}
+
+.v51-friend{
+  position:absolute;
+  width:92px;
+  height:92px;
+  transform:translate(-50%,-50%);
+  animation:v51FriendDance .62s ease-in-out infinite alternate;
+  filter:drop-shadow(0 5px 6px rgba(0,0,0,.18));
+}
+
+.v51-friend .head{
+  position:absolute;
+  left:50%;
+  top:12%;
+  width:46px;
+  height:48px;
+  transform:translateX(-50%);
+  border-radius:52% 48% 44% 46%;
+  background:var(--friend,#ba5a7c);
+}
+
+.v51-friend .eye{
+  position:absolute;
+  top:27px;
+  width:7px;
+  height:9px;
+  border-radius:50%;
+  background:#fff;
+  z-index:3;
+}
+.v51-friend .eye::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  border-radius:50%;
+  background:#253d43;
+}
+.v51-friend .eye.left{left:35px}
+.v51-friend .eye.right{right:35px}
+
+.v51-friend .arms{
+  position:absolute;
+  left:50%;
+  top:51px;
+  width:74px;
+  height:33px;
+  transform:translateX(-50%);
+  color:var(--friend,#ba5a7c);
+  font-size:34px;
+  line-height:1;
+  letter-spacing:-5px;
+  text-align:center;
+}
+
+.v51-friend.one{left:22%;top:67%;--friend:#8f65c5}
+.v51-friend.two{left:78%;top:64%;--friend:#e06b76;animation-delay:.18s}
+.v51-friend.three{left:50%;top:78%;--friend:#4fa8a0;animation-delay:.34s}
+
+@keyframes v51FriendDance{
+  from{transform:translate(-50%,-50%) rotate(-8deg) translateY(2px)}
+  to{transform:translate(-50%,-50%) rotate(8deg) translateY(-8px)}
+}
+
+.v51-disco-ball{
+  position:absolute;
+  left:50%;
+  top:5%;
+  transform:translateX(-50%);
+  font-size:48px;
+  animation:v51BallSpin 2.5s linear infinite;
+}
+
+@keyframes v51BallSpin{
+  to{transform:translateX(-50%) rotate(360deg)}
+}
+
+.v51-music-note{
+  position:absolute;
+  font-size:26px;
+  animation:v51NoteFloat 2.4s ease-in infinite;
+  opacity:.9;
+}
+.v51-music-note.n1{left:16%;bottom:22%}
+.v51-music-note.n2{right:14%;bottom:25%;animation-delay:.7s}
+.v51-music-note.n3{left:47%;bottom:14%;animation-delay:1.2s}
+
+@keyframes v51NoteFloat{
+  0%{transform:translateY(0) rotate(-8deg);opacity:0}
+  20%{opacity:1}
+  100%{transform:translateY(-95px) rotate(16deg);opacity:0}
+}
+
+.v51-party-card-front{
+  position:relative;
+  z-index:40;
+}
+
+
+/* =========================================================
+   v5.2 – discokalas, låtval, samma bläckfiskmodell, liten start
+   ========================================================= */
+
+#v50-growth-party{
+  overflow:hidden;
+}
+
+#v52-party-stage{
+  position:absolute;
+  inset:0;
+  z-index:24;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.v52-friend,
+.v52-main-copy{
+  position:absolute;
+  width:130px;
+  height:130px;
+  transform:translate(-50%,-50%);
+  transform-origin:center;
+  animation:v52Dance .62s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+
+.v52-friend .octopus-svg,
+.v52-main-copy .octopus-svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+/* Samma form som spelarens bläckfisk, men olika färgtoner */
+.v52-friend.purple{left:17%;top:63%;filter:hue-rotate(65deg) saturate(1.25)}
+.v52-friend.blue{left:83%;top:63%;filter:hue-rotate(150deg) saturate(1.2);animation-delay:.15s}
+.v52-friend.green{left:31%;top:80%;filter:hue-rotate(205deg) saturate(1.15);animation-delay:.3s}
+.v52-friend.orange{left:69%;top:80%;filter:hue-rotate(-38deg) saturate(1.3);animation-delay:.45s}
+
+.v52-main-copy{
+  left:50%;
+  top:49%;
+  z-index:32;
+  animation-duration:.46s;
+}
+
+@keyframes v52Dance{
+  from{transform:translate(-50%,-50%) rotate(-10deg) translateY(3px) scale(.94)}
+  to{transform:translate(-50%,-50%) rotate(10deg) translateY(-10px) scale(1.02)}
+}
+
+.v52-disco-ball{
+  position:absolute;
+  left:50%;
+  top:3%;
+  transform:translateX(-50%);
+  font-size:52px;
+  animation:v52DiscoSpin 1.7s linear infinite;
+}
+
+@keyframes v52DiscoSpin{
+  to{transform:translateX(-50%) rotate(360deg)}
+}
+
+.v52-beam{
+  position:absolute;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  filter:blur(20px);
+  opacity:.28;
+  animation:v52Beam .48s ease-in-out infinite alternate;
+}
+.v52-beam.a{left:-30px;top:4%;background:#ff3ca0}
+.v52-beam.b{right:-30px;top:12%;background:#24d7cf;animation-delay:.16s}
+.v52-beam.c{left:36%;bottom:-60px;background:#ffd442;animation-delay:.32s}
+
+@keyframes v52Beam{
+  from{transform:scale(.72);opacity:.15}
+  to{transform:scale(1.4);opacity:.44}
+}
+
+#v52-track-picker{
+  position:relative;
+  z-index:60;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:7px;
+  margin:10px auto 0;
+  max-width:360px;
+}
+
+#v52-track-picker button{
+  border:1px solid rgba(0,127,122,.22);
+  border-radius:999px;
+  padding:8px 10px;
+  background:#fff;
+  color:#164b50;
+  font-weight:800;
+  font-size:12px;
+  cursor:pointer;
+}
+
+#v52-track-picker button.active{
+  background:#dff5f2;
+  outline:2px solid rgba(0,127,122,.2);
+}
+
+#v52-party-countdown{
+  position:relative;
+  z-index:60;
+  margin-top:8px;
+  font-size:12px;
+  font-weight:800;
+  color:#315d60;
+}
+
+#v50-party-close{
+  position:relative;
+  z-index:70;
+}
+
+#v50-party-close[disabled]{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+
+/* =========================================================
+   v5.3 – stäng infon, men låt festen fortsätta i akvariet
+   ========================================================= */
+
+#v50-growth-party.v53-party-open{
+  background:transparent !important;
+  backdrop-filter:none !important;
+  pointer-events:none !important;
+}
+
+#v50-growth-party.v53-party-open .v50-party-card{
+  display:none !important;
+}
+
+#v50-growth-party.v53-party-open #v52-party-stage{
+  display:block !important;
+  pointer-events:none !important;
+}
+
+/* Låt själva akvariet synas tydligt medan kompisarna festar */
+#v50-growth-party.v53-party-open{
+  z-index:700 !important;
+}
+
+
+/* =========================================================
+   v5.4 – hand som klappar + tydligare stimulans
+   ========================================================= */
+
+#v54-hand{
+  position:absolute;
+  z-index:520;
+  font-size:54px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .55s ease, top .55s ease, transform .35s ease, opacity .3s ease;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.18));
+}
+
+#v54-hand.pet{
+  animation:v54Pet .45s ease-in-out 4;
+}
+
+@keyframes v54Pet{
+  0%{transform:translate(-50%,-50%) rotate(-8deg) translateY(0)}
+  50%{transform:translate(-50%,-50%) rotate(6deg) translateY(7px)}
+  100%{transform:translate(-50%,-50%) rotate(-8deg) translateY(0)}
+}
+
+.v54-stim-pop{
+  position:absolute;
+  z-index:530;
+  pointer-events:none;
+  font-size:22px;
+  animation:v54StimPop 1.2s ease forwards;
+}
+
+@keyframes v54StimPop{
+  0%{transform:translate(-50%,-50%) scale(.7);opacity:0}
+  20%{opacity:1}
+  100%{transform:translate(-50%,-95%) scale(1.15);opacity:0}
+}
+
+
+/* =========================================================
+   v5.5 – bläckfisken ska verkligen vara BAKOM algerna
+   ========================================================= */
+
+/* Algerna måste ligga framför bläckfisken när han gömmer sig */
+.v55-kelp-front{
+  z-index:900 !important;
+  position:absolute !important;
+}
+
+/* Bläckfisken går bakom lagret */
+#octopus.v55-behind-kelp{
+  z-index:120 !important;
+}
+
+/* Han blir delvis skymd, inte genomskinlig */
+#octopus.v55-behind-kelp{
+  opacity:1 !important;
+  filter:none !important;
+}
+
+
+/* =========================================================
+   v5.6 – tillväxt är en liten NOTIS, inte en stor ruta
+   ========================================================= */
+
+#v56-growth-note{
+  position:absolute;
+  left:50%;
+  top:12px;
+  transform:translateX(-50%);
+  z-index:1600;
+  max-width:82%;
+  padding:10px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.95);
+  border:2px solid rgba(0,175,168,.28);
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+  color:#005f63;
+  font-weight:900;
+  text-align:center;
+  pointer-events:none;
+  animation:v56NoteIn .28s ease;
+}
+
+@keyframes v56NoteIn{
+  from{transform:translateX(-50%) translateY(-12px);opacity:0}
+  to{transform:translateX(-50%) translateY(0);opacity:1}
+}
+
+#v56-music-strip{
+  position:absolute;
+  left:50%;
+  bottom:12px;
+  transform:translateX(-50%);
+  z-index:1550;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px;
+  max-width:90%;
+  padding:7px 9px;
+  border-radius:18px;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 7px 18px rgba(0,0,0,.16);
+}
+
+#v56-music-strip button{
+  border:1px solid rgba(0,127,122,.18);
+  border-radius:999px;
+  padding:7px 9px;
+  background:#fff;
+  color:#164b50;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+#v56-music-strip button.active{
+  background:#dff5f2;
+  outline:2px solid rgba(0,127,122,.18);
+}
+
+/* Den gamla stora kalasrutan används inte längre. */
+#v50-growth-party.v56-live-party{
+  background:transparent !important;
+  backdrop-filter:none !important;
+  pointer-events:none !important;
+  z-index:700 !important;
+}
+
+#v50-growth-party.v56-live-party .v50-party-card{
+  display:none !important;
+}
+
+#v50-growth-party.v56-live-party #v52-party-stage{
+  display:block !important;
+  pointer-events:none !important;
+}
+
+
+/* =========================================================
+   v5.7 – handen i hörnet klappar, bättre gömning, mer stimulans
+   ========================================================= */
+
+/* Hörnhanden ska vara själva handen som används vid klappning. */
+#hand-button,
+.hand-button,
+#pet-button{
+  position:relative;
+  z-index:1200;
+}
+
+/* Tillfällig flygande kopia av hörnhanden. */
+#v57-corner-hand-fly{
+  position:absolute;
+  z-index:1500;
+  width:76px;
+  height:76px;
+  display:grid;
+  place-items:center;
+  font-size:54px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .7s ease, top .7s ease, transform .35s ease, opacity .3s ease;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.2));
+}
+
+#v57-corner-hand-fly.pet{
+  animation:v57HandPet .38s ease-in-out 5;
+}
+
+@keyframes v57HandPet{
+  0%{transform:translate(-50%,-50%) rotate(-10deg) translateY(0)}
+  50%{transform:translate(-50%,-50%) rotate(8deg) translateY(8px)}
+  100%{transform:translate(-50%,-50%) rotate(-10deg) translateY(0)}
+}
+
+/* Gömning: algerna blir ett tydligt främre lager. */
+.v57-kelp-cover{
+  z-index:1400 !important;
+  position:absolute !important;
+  pointer-events:none !important;
+  transform:translate(-50%,-50%) scale(1.15);
+}
+
+/* Bläckfisken ligger bakom algerna och ska inte bli genomskinlig. */
+#octopus.v57-behind-kelp{
+  z-index:180 !important;
+  opacity:1 !important;
+  filter:none !important;
+}
+
+/* Lite mer visuell feedback när stimulans ökar. */
+.v57-stim-burst{
+  position:absolute;
+  z-index:1550;
+  pointer-events:none;
+  font-size:24px;
+  animation:v57StimBurst 1.15s ease forwards;
+}
+
+@keyframes v57StimBurst{
+  0%{opacity:0;transform:translate(-50%,-30%) scale(.7)}
+  20%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-120%) scale(1.2)}
+}
+
+
+/* =========================================================
+   v5.8 – en ring, självgående bus, varierad lek, missnöjd min
+   ========================================================= */
+
+.v58-ring-stage{
+  position:absolute;
+  width:108px;
+  height:108px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  background:transparent;
+  border:0 !important;
+  z-index:300;
+}
+
+.v58-ring-back,
+.v58-ring-front{
+  position:absolute;
+  inset:0;
+  border:13px solid #e4b44c;
+  border-radius:50%;
+  box-sizing:border-box;
+  background:transparent;
+}
+
+.v58-ring-back{
+  clip-path:polygon(0 0,100% 0,100% 50%,0 50%);
+  z-index:220;
+}
+
+.v58-ring-front{
+  clip-path:polygon(0 50%,100% 50%,100% 100%,0 100%);
+  z-index:520;
+}
+
+#octopus.v58-through-ring{z-index:360!important}
+
+#octopus.v58-dancing{
+  animation:v58Dance .46s ease-in-out infinite alternate;
+}
+@keyframes v58Dance{
+  from{rotate:-9deg;translate:0 2px}
+  to{rotate:9deg;translate:0 -7px}
+}
+
+#octopus.v58-unhappy{
+  filter:saturate(.86) brightness(.94);
+}
+
+.v58-idle-note{
+  position:absolute;
+  left:50%;
+  top:10px;
+  transform:translateX(-50%);
+  z-index:650;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:#315d60;
+  font-size:11px;
+  font-weight:800;
+  pointer-events:none;
+  animation:v58Note 2.1s ease forwards;
+}
+@keyframes v58Note{
+  0%{opacity:0;transform:translateX(-50%) translateY(-6px)}
+  15%{opacity:1}
+  80%{opacity:1}
+  100%{opacity:0;transform:translateX(-50%) translateY(-12px)}
+}
+
+
+/* =========================================================
+   v5.9 – stora handen, EN ring, roligare sand/burk, flyttbart pussel
+   ========================================================= */
+
+#hand{
+  z-index:1250!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  transition:left .7s ease,top .7s ease,transform .35s ease,opacity .3s ease!important;
+}
+
+#hand.v59-petting{animation:v59HandPet .34s ease-in-out 6}
+@keyframes v59HandPet{
+  0%{transform:rotate(-8deg) translateY(0)}
+  50%{transform:rotate(8deg) translateY(8px)}
+  100%{transform:rotate(-8deg) translateY(0)}
+}
+
+#octopus.v59-cuddle{animation:v59Cuddle .42s ease-in-out 5}
+@keyframes v59Cuddle{
+  from{rotate:-5deg;translate:0 0}
+  to{rotate:5deg;translate:3px -4px}
+}
+
+#octopus.v59-happy-bus{animation:v59HappyBus .33s ease-in-out 7 alternate}
+@keyframes v59HappyBus{
+  from{rotate:-11deg;translate:-3px 2px}
+  to{rotate:11deg;translate:4px -7px}
+}
+
+.v59-heart{
+  position:absolute;z-index:1600;pointer-events:none;font-size:20px;
+  animation:v59HeartFloat 1.5s ease-out forwards;
+}
+@keyframes v59HeartFloat{
+  0%{opacity:0;transform:translate(-50%,-20%) scale(.5)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-150%) scale(1.35) rotate(16deg)}
+}
+
+/* exakt en ring */
+.v59-ring-stage{
+  position:absolute;width:112px;height:112px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;z-index:300;
+}
+.v59-ring-stage svg{
+  position:absolute;inset:0;width:100%;height:100%;overflow:visible;
+}
+.v59-ring-back{z-index:250}
+.v59-ring-front{z-index:520}
+
+/* pusslet ska gå att flytta */
+#v4-puzzle-board{
+  touch-action:none!important;
+  cursor:grab!important;
+}
+#v4-puzzle-board.v59-dragging{cursor:grabbing!important}
+
+
+/* =========================================================
+   v6.0 – använd befintlig högerhand, mys, pusselkonfetti, ljud
+   ========================================================= */
+
+/* Den befintliga handen nere till höger används direkt. */
+#hand{
+  cursor:pointer!important;
+  pointer-events:auto!important;
+  z-index:1500!important;
+  transition:left .7s ease, top .7s ease, transform .35s ease, opacity .25s ease!important;
+}
+
+#hand.v60-moving{
+  position:absolute!important;
+}
+
+#hand.v60-mys{
+  animation:v60HandMys .36s ease-in-out 6;
+}
+@keyframes v60HandMys{
+  0%{transform:rotate(-7deg) translateY(0)}
+  50%{transform:rotate(7deg) translateY(7px)}
+  100%{transform:rotate(-7deg) translateY(0)}
+}
+
+#octopus.v60-mys-back{
+  animation:v60OctoMys .4s ease-in-out 6;
+}
+@keyframes v60OctoMys{
+  0%{rotate:-4deg;translate:-2px 0}
+  50%{rotate:5deg;translate:4px -3px}
+  100%{rotate:-4deg;translate:-2px 0}
+}
+
+.v60-heart{
+  position:absolute;
+  z-index:1650;
+  pointer-events:none;
+  font-size:22px;
+  animation:v60Heart 1.6s ease-out forwards;
+}
+@keyframes v60Heart{
+  0%{opacity:0;transform:translate(-50%,-20%) scale(.45)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-180%) scale(1.35) rotate(14deg)}
+}
+
+/* Pusselkonfetti */
+.v60-confetti{
+  position:absolute;
+  z-index:1700;
+  pointer-events:none;
+  font-size:20px;
+  animation:v60Confetti 1.8s ease-out forwards;
+}
+@keyframes v60Confetti{
+  0%{opacity:1;transform:translate(-50%,-50%) rotate(0deg) scale(.7)}
+  100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(1.1)}
+}
+
+#v60-puzzle-win{
+  position:absolute;
+  left:50%;
+  top:16%;
+  transform:translateX(-50%);
+  z-index:1800;
+  background:rgba(255,255,255,.96);
+  border:2px solid rgba(0,175,168,.28);
+  border-radius:999px;
+  padding:9px 15px;
+  font-weight:900;
+  color:#005f63;
+  box-shadow:0 8px 18px rgba(0,0,0,.16);
+  pointer-events:none;
+}
+
+/* Liten ljudknapp */
+#v60-sound-toggle{
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:1600;
+  border:0;
+  border-radius:999px;
+  padding:8px 10px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 5px 14px rgba(0,0,0,.14);
+  cursor:pointer;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   v6.1 – vuxen -> äldre -> senior med grå "hår" och nytt kalas
+   ========================================================= */
+
+#octopus.v61-older .octopus-svg{
+  filter:saturate(.92) brightness(.98);
+}
+
+#octopus.v61-senior .octopus-svg{
+  filter:saturate(.78) brightness(1.03);
+}
+
+/* Små grå hårstrån ovanpå huvudet när den blir äldre. */
+.v61-gray-hair{
+  pointer-events:none;
+}
+
+.v61-gray-hair path{
+  stroke:#d6d9dc;
+  stroke-width:5;
+  stroke-linecap:round;
+  fill:none;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.18));
+}
+
+#v61-age-note{
+  position:absolute;
+  left:50%;
+  top:12px;
+  transform:translateX(-50%);
+  z-index:1700;
+  max-width:84%;
+  padding:9px 15px;
+  border-radius:999px;
+  background:rgba(255,255,255,.96);
+  border:2px solid rgba(0,175,168,.28);
+  box-shadow:0 8px 20px rgba(0,0,0,.18);
+  color:#005f63;
+  font-weight:900;
+  text-align:center;
+  pointer-events:none;
+  animation:v61AgeNote .3s ease;
+}
+
+@keyframes v61AgeNote{
+  from{opacity:0;transform:translateX(-50%) translateY(-10px)}
+  to{opacity:1;transform:translateX(-50%) translateY(0)}
+}
+
+
+/* =========================================================
+   v6.3 – levande bakgrund: bubblor, musslor och besökande kompis
+   ========================================================= */
+
+#v63-ambient-layer{
+  position:absolute;
+  inset:0;
+  z-index:70;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.v63-bubble{
+  position:absolute;
+  bottom:-24px;
+  width:var(--s);
+  height:var(--s);
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.72);
+  background:rgba(255,255,255,.12);
+  opacity:.75;
+  animation:v63BubbleRise var(--d) linear forwards;
+}
+
+@keyframes v63BubbleRise{
+  0%{transform:translateY(0) translateX(0) scale(.8);opacity:0}
+  10%{opacity:.8}
+  55%{transform:translateY(-230px) translateX(var(--drift)) scale(1)}
+  100%{transform:translateY(-520px) translateX(calc(var(--drift) * -0.4)) scale(1.12);opacity:0}
+}
+
+.v63-mussel{
+  position:absolute;
+  z-index:78;
+  font-size:28px;
+  transform:translate(-50%,-50%);
+  filter:drop-shadow(0 3px 4px rgba(0,0,0,.18));
+  animation:v63MusselIdle 1.5s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes v63MusselIdle{
+  from{transform:translate(-50%,-50%) rotate(-4deg) scale(.96)}
+  to{transform:translate(-50%,-50%) rotate(4deg) scale(1.03)}
+}
+
+.v63-visitor{
+  position:absolute;
+  z-index:210;
+  width:92px;
+  height:92px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  transition:left .8s ease, top .8s ease, opacity .35s ease;
+  animation:v63VisitorBob .7s ease-in-out infinite alternate;
+}
+
+.v63-visitor .octopus-svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.v63-visitor.friend-a .octopus-svg{filter:hue-rotate(70deg) saturate(1.22)}
+.v63-visitor.friend-b .octopus-svg{filter:hue-rotate(155deg) saturate(1.2)}
+.v63-visitor.friend-c .octopus-svg{filter:hue-rotate(-42deg) saturate(1.3)}
+
+@keyframes v63VisitorBob{
+  from{translate:0 2px;rotate:-4deg}
+  to{translate:0 -5px;rotate:4deg}
+}
+
+.v63-ambient-note{
+  position:absolute;
+  left:50%;
+  top:44px;
+  transform:translateX(-50%);
+  z-index:680;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:#315d60;
+  font-size:11px;
+  font-weight:800;
+  pointer-events:none;
+  animation:v63Note 2.2s ease forwards;
+}
+
+@keyframes v63Note{
+  0%{opacity:0;transform:translateX(-50%) translateY(-6px)}
+  15%{opacity:1}
+  80%{opacity:1}
+  100%{opacity:0;transform:translateX(-50%) translateY(-12px)}
+}
+
+
+/* =========================================================
+   v6.4 – färdigt pussel kan klickas ner + konfetti + trumpet
+   ========================================================= */
+
+#v4-puzzle-board.v64-complete{
+  box-shadow:0 0 0 4px rgba(255,215,64,.36), 0 12px 28px rgba(0,0,0,.20);
+}
+
+#v64-puzzle-complete-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:8px 0 4px;
+  padding:8px 10px;
+  border-radius:14px;
+  background:rgba(255,255,255,.94);
+  border:2px solid rgba(0,175,168,.22);
+  font-weight:900;
+  color:#005f63;
+}
+
+#v64-puzzle-complete-bar button{
+  min-width:44px;
+  min-height:44px;
+  border:0;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  font-size:20px;
+  cursor:pointer;
+}
+
+.v64-trumpet-note{
+  position:absolute;
+  z-index:1800;
+  pointer-events:none;
+  font-size:25px;
+  animation:v64TrumpetNote 1.7s ease-out forwards;
+}
+@keyframes v64TrumpetNote{
+  0%{opacity:0;transform:translate(-50%,-20%) scale(.6)}
+  15%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-155%) scale(1.25) rotate(10deg)}
+}
+
+
+/* =========================================================
+   v6.6 – hattar, förvaring i burk, tydlig magi, riktiga kojor
+   ========================================================= */
+
+/* Hatt på bläckfisken */
+#v66-hat{
+  position:absolute;
+  left:50%;
+  top:3%;
+  transform:translate(-50%,-50%);
+  z-index:55;
+  font-size:34px;
+  pointer-events:auto;
+  cursor:pointer;
+  filter:drop-shadow(0 3px 4px rgba(0,0,0,.2));
+}
+
+/* Tydlig magi */
+.v66-magic-flash{
+  position:absolute;
+  inset:0;
+  z-index:1750;
+  pointer-events:none;
+  background:radial-gradient(circle at center,rgba(255,255,255,.95),rgba(219,105,255,.3),transparent 66%);
+  animation:v66MagicFlash .9s ease-out forwards;
+}
+@keyframes v66MagicFlash{
+  0%{opacity:0} 25%{opacity:1} 100%{opacity:0}
+}
+
+.v66-magic-number{
+  position:absolute;
+  z-index:1800;
+  pointer-events:none;
+  font-size:23px;
+  font-weight:1000;
+  text-shadow:0 2px 4px rgba(255,255,255,.9);
+  animation:v66MagicNumber 1.7s ease-out forwards;
+}
+@keyframes v66MagicNumber{
+  0%{opacity:0;transform:translate(-50%,-15%) scale(.7)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-160%) scale(1.18)}
+}
+#v66-magic-result{
+  position:absolute;
+  left:50%;
+  top:13%;
+  transform:translateX(-50%);
+  z-index:1820;
+  max-width:88%;
+  padding:10px 14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.96);
+  box-shadow:0 8px 22px rgba(0,0,0,.18);
+  color:#164b50;
+  font-weight:900;
+  text-align:center;
+  pointer-events:none;
+}
+
+/* Kojorna ska se ut som KOJOR, inte bara emoji */
+.v4-object.v4-home .v4-emoji{display:none!important}
+.v66-home{
+  position:relative;
+  width:88px;
+  height:68px;
+  transform:translateY(2px);
+  filter:drop-shadow(0 5px 5px rgba(0,0,0,.22));
+}
+.v66-home-body{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:0;
+  height:46px;
+  border-radius:18px 18px 12px 12px;
+  background:linear-gradient(#a67c52,#7b5435);
+  border:3px solid rgba(74,45,28,.35);
+}
+.v66-home-roof{
+  position:absolute;
+  left:5px;
+  top:0;
+  width:78px;
+  height:35px;
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+  background:linear-gradient(#6d4b35,#4c3428);
+  z-index:2;
+}
+.v66-home-door{
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform:translateX(-50%);
+  width:25px;
+  height:31px;
+  border-radius:14px 14px 0 0;
+  background:#253f43;
+  border:3px solid rgba(255,255,255,.18);
+  z-index:3;
+}
+.v66-home-detail{
+  position:absolute;
+  z-index:4;
+  font-size:25px;
+  right:4px;
+  top:10px;
+}
+
+/* Stilvariationer */
+.v66-home.shell .v66-home-body{background:linear-gradient(#f2c59c,#d69270)}
+.v66-home.shell .v66-home-roof{background:linear-gradient(#efb38a,#cc7d62)}
+.v66-home.coral .v66-home-body{background:linear-gradient(#ef8c83,#ce5e70)}
+.v66-home.coral .v66-home-roof{background:linear-gradient(#da6475,#9f4358)}
+.v66-home.pearl .v66-home-body{background:linear-gradient(#fff,#dfe9ee)}
+.v66-home.pearl .v66-home-roof{background:linear-gradient(#e7f6f5,#bcd9d9)}
+.v66-home.luxury .v66-home-body{background:linear-gradient(#d8a74e,#9e6e2e)}
+.v66-home.luxury .v66-home-roof{background:linear-gradient(#7a4f32,#4d3022)}
+.v66-home.palace .v66-home-body{background:linear-gradient(#d9c6ef,#9a78bf)}
+.v66-home.palace .v66-home-roof{background:linear-gradient(#af8ad0,#77549b)}
+
+
+/* =========================================================
+   v6.7 – klappning aktiveras mitt på bläckfiskens kropp
+   ========================================================= */
+#octopus{
+  cursor:pointer;
+}
+
+
+/* =========================================================
+   v6.8 – fånga musslan innan den försvinner
+   ========================================================= */
+
+.v68-mussel{
+  position:absolute;
+  z-index:1450;
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  font-size:42px;
+  cursor:pointer;
+  user-select:none;
+  touch-action:manipulation;
+  transform:translate(-50%,-50%);
+  animation:v68MusselBob .65s ease-in-out infinite alternate;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.22));
+}
+
+@keyframes v68MusselBob{
+  from{transform:translate(-50%,-50%) rotate(-6deg) translateY(0)}
+  to{transform:translate(-50%,-50%) rotate(6deg) translateY(-5px)}
+}
+
+.v68-mussel.v68-caught{
+  animation:v68Caught .5s ease forwards;
+}
+
+@keyframes v68Caught{
+  from{transform:translate(-50%,-50%) scale(1);opacity:1}
+  to{transform:translate(-50%,-90%) scale(1.35);opacity:0}
+}
+
+.v68-catch-note{
+  position:absolute;
+  z-index:1500;
+  transform:translate(-50%,-50%);
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.94);
+  color:#164b50;
+  font-weight:900;
+  font-size:12px;
+  pointer-events:none;
+  animation:v68CatchNote 1.2s ease forwards;
+}
+
+@keyframes v68CatchNote{
+  0%{opacity:0;transform:translate(-50%,-20%) scale(.8)}
+  20%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-110%) scale(1.08)}
+}
+
+
+/* =========================================================
+   v6.9 – pussel klart: konfetti + trumpetfanfar + nytt pussel
+   ========================================================= */
+
+#v69-puzzle-celebration{
+  position:absolute;
+  inset:0;
+  z-index:1800;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+#v69-puzzle-banner{
+  position:absolute;
+  left:50%;
+  top:12%;
+  transform:translateX(-50%);
+  padding:11px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.96);
+  border:2px solid rgba(0,175,168,.28);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  color:#005f63;
+  font-weight:900;
+  font-size:18px;
+  white-space:nowrap;
+  animation:v69Banner .35s ease;
+}
+
+@keyframes v69Banner{
+  from{opacity:0;transform:translateX(-50%) translateY(-12px) scale(.9)}
+  to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
+}
+
+.v69-confetti{
+  position:absolute;
+  top:-10%;
+  font-size:18px;
+  animation:v69Fall 2.7s linear forwards;
+}
+
+@keyframes v69Fall{
+  0%{transform:translateY(0) rotate(0deg);opacity:1}
+  100%{transform:translateY(540px) rotate(900deg);opacity:.15}
+}
+
+.v69-puzzle-motif{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  z-index:0;
+  font-size:58px;
+  line-height:1;
+  pointer-events:none;
+}
+
+.v69-puzzle-title{
+  position:absolute;
+  left:50%;
+  bottom:4px;
+  transform:translateX(-50%);
+  z-index:2;
+  padding:2px 6px;
+  border-radius:8px;
+  background:rgba(255,255,255,.7);
+  color:#315d60;
+  font-size:10px;
+  font-weight:900;
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   v7.0 – hatten sitter kvar tills spelaren tar av den
+   ========================================================= */
+#v66-hat{
+  pointer-events:auto !important;
+  cursor:pointer;
+  z-index:50;
+}
+
+
+/* =========================================================
+   v7.1 – spontana besökare, men inget händer förrän man klickar
+   ========================================================= */
+
+#v71-visitor-layer{
+  position:absolute;
+  inset:0;
+  z-index:620;
+  pointer-events:none;
+}
+
+.v71-visitor{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  pointer-events:auto;
+  cursor:pointer;
+  user-select:none;
+  touch-action:manipulation;
+  filter:drop-shadow(0 4px 6px rgba(0,0,0,.18));
+  animation:v71VisitorBob 1.2s ease-in-out infinite alternate;
+}
+
+.v71-visitor.friend{
+  width:92px;
+  height:92px;
+}
+
+.v71-visitor.friend .octopus-svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.v71-visitor.animal{
+  font-size:44px;
+}
+
+@keyframes v71VisitorBob{
+  from{transform:translate(-50%,-50%) translateY(0) rotate(-3deg)}
+  to{transform:translate(-50%,-50%) translateY(-5px) rotate(3deg)}
+}
+
+.v71-visitor.v71-active{
+  animation:v71VisitorReact .45s ease-in-out 4 alternate;
+}
+
+@keyframes v71VisitorReact{
+  from{transform:translate(-50%,-50%) scale(1) rotate(-5deg)}
+  to{transform:translate(-50%,-50%) scale(1.12) rotate(6deg)}
+}
+
+
+/* =========================================================
+   v7.3 – tydligare personlighet, favoriter och vanor
+   ========================================================= */
+
+#v73-discovery-note{
+  position:absolute;
+  left:50%;
+  top:46px;
+  transform:translateX(-50%);
+  z-index:1700;
+  max-width:84%;
+  padding:8px 13px;
+  border-radius:16px;
+  background:rgba(255,255,255,.95);
+  border:2px solid rgba(0,175,168,.22);
+  box-shadow:0 7px 18px rgba(0,0,0,.15);
+  color:#164b50;
+  font-size:12px;
+  font-weight:850;
+  text-align:center;
+  pointer-events:none;
+  animation:v73Note 2.8s ease forwards;
+}
+@keyframes v73Note{
+  0%{opacity:0;transform:translateX(-50%) translateY(-8px)}
+  12%{opacity:1;transform:translateX(-50%) translateY(0)}
+  82%{opacity:1}
+  100%{opacity:0;transform:translateX(-50%) translateY(-8px)}
+}
+
+.v73-heart{
+  position:absolute;
+  z-index:900;
+  pointer-events:none;
+  font-size:20px;
+  animation:v73Heart 1.4s ease forwards;
+}
+@keyframes v73Heart{
+  0%{opacity:0;transform:translate(-50%,-40%) scale(.7)}
+  20%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-120%) scale(1.15)}
+}
+
+
+/* =========================================================
+   v7.4 – hemmen ser ut som riktiga hem: grotta, snäckhus,
+   korallkoja, sjunket skepp och slott
+   ========================================================= */
+
+.v4-object.v4-home{
+  width:132px !important;
+  height:98px !important;
+  overflow:visible !important;
+}
+
+.v74-home{
+  position:relative;
+  display:block;
+  width:126px;
+  height:92px;
+  filter:drop-shadow(0 7px 6px rgba(0,0,0,.22));
+  pointer-events:none;
+}
+
+.v74-home *{box-sizing:border-box}
+
+/* Gemensam mörk ingång */
+.v74-door{
+  position:absolute;
+  left:50%;
+  bottom:3px;
+  transform:translateX(-50%);
+  width:38px;
+  height:42px;
+  border-radius:50% 50% 10px 10px;
+  background:linear-gradient(#203f45,#0e2429);
+  box-shadow:inset 0 4px 9px rgba(0,0,0,.45);
+  z-index:7;
+}
+
+/* 1. STENGROTTA */
+.v74-home.basic .v74-main{
+  position:absolute;
+  left:8px;right:8px;bottom:2px;height:74px;
+  border-radius:55% 55% 25% 25%;
+  background:
+    radial-gradient(circle at 24% 25%,#aeb8ba 0 8px,transparent 9px),
+    radial-gradient(circle at 72% 24%,#7e898c 0 10px,transparent 11px),
+    radial-gradient(circle at 50% 60%,#9aa5a7 0 8px,transparent 9px),
+    linear-gradient(145deg,#9ba7aa,#5f6c70);
+  border:4px solid #4d5a5e;
+}
+.v74-home.basic .v74-top{
+  position:absolute;left:21px;top:1px;width:84px;height:34px;
+  border-radius:50% 50% 30% 30%;
+  background:linear-gradient(#788589,#59666a);
+  transform:rotate(-2deg);
+}
+
+/* 2. SNÄCKHUS */
+.v74-home.shell .v74-main{
+  position:absolute;
+  left:15px;top:4px;width:96px;height:82px;
+  border-radius:55% 45% 52% 48%;
+  background:
+    radial-gradient(circle at 48% 48%,transparent 0 13px,#b77a59 14px 18px,transparent 19px),
+    radial-gradient(circle at 48% 48%,transparent 0 25px,#d89a72 26px 30px,transparent 31px),
+    linear-gradient(145deg,#f5d5b2,#d58e6b);
+  border:4px solid #b87355;
+  transform:rotate(-8deg);
+}
+.v74-home.shell .v74-door{bottom:5px}
+
+/* 3. KORALLKOJA */
+.v74-home.coral .v74-main{
+  position:absolute;
+  left:14px;right:14px;bottom:2px;height:64px;
+  border-radius:34px 34px 15px 15px;
+  background:linear-gradient(145deg,#e8837d,#bd5367);
+  border:4px solid #9e4859;
+}
+.v74-home.coral .v74-top{
+  position:absolute;left:8px;top:0;width:110px;height:48px;
+  background:
+    radial-gradient(ellipse at 15% 90%,#ef8e83 0 13%,transparent 14%),
+    radial-gradient(ellipse at 36% 72%,#d95d70 0 14%,transparent 15%),
+    radial-gradient(ellipse at 60% 82%,#f09d85 0 15%,transparent 16%),
+    radial-gradient(ellipse at 82% 65%,#cf536c 0 15%,transparent 16%);
+}
+
+/* 4. SJUNKET SKEPP/BÅT */
+.v74-home.pearl .v74-main{
+  position:absolute;
+  left:9px;right:9px;bottom:7px;height:45px;
+  background:linear-gradient(#8a6645,#5a3f2d);
+  clip-path:polygon(0 0,100% 0,88% 100%,14% 100%);
+  border-bottom:5px solid #3f2d22;
+}
+.v74-home.pearl .v74-top{
+  position:absolute;
+  left:22px;top:17px;width:74px;height:32px;
+  background:linear-gradient(#b08456,#7a5638);
+  border:3px solid #5f432e;
+  border-radius:6px 6px 0 0;
+}
+.v74-home.pearl .v74-mast{
+  position:absolute;
+  left:62px;top:0;width:5px;height:50px;
+  background:#5a402c;
+}
+.v74-home.pearl .v74-sail{
+  position:absolute;
+  left:67px;top:3px;width:34px;height:29px;
+  background:#ddd2b8;
+  clip-path:polygon(0 0,100% 45%,0 100%);
+  opacity:.8;
+}
+.v74-home.pearl .v74-door{
+  left:52px;bottom:9px;width:31px;height:29px;border-radius:10px 10px 3px 3px;
+}
+
+/* 5. UNDERVATTENSSLÖTT */
+.v74-home.luxury .v74-main,
+.v74-home.palace .v74-main{
+  position:absolute;
+  left:20px;right:20px;bottom:2px;height:65px;
+  background:linear-gradient(145deg,#cbb7dd,#8e70ad);
+  border:4px solid #72528f;
+  border-radius:8px 8px 12px 12px;
+}
+.v74-home.luxury .v74-tower,
+.v74-home.palace .v74-tower{
+  position:absolute;
+  bottom:3px;
+  width:31px;height:79px;
+  background:linear-gradient(#d7c6e5,#9475b3);
+  border:4px solid #72528f;
+  border-radius:7px 7px 5px 5px;
+}
+.v74-home.luxury .v74-tower.left,
+.v74-home.palace .v74-tower.left{left:5px}
+.v74-home.luxury .v74-tower.right,
+.v74-home.palace .v74-tower.right{right:5px}
+.v74-home.luxury .v74-tower:before,
+.v74-home.palace .v74-tower:before{
+  content:"";
+  position:absolute;
+  left:-6px;right:-6px;top:-14px;height:20px;
+  background:#72528f;
+  clip-path:polygon(0 100%,0 35%,20% 35%,20% 0,40% 0,40% 35%,60% 35%,60% 0,80% 0,80% 35%,100% 35%,100% 100%);
+}
+.v74-home.luxury .v74-flag,
+.v74-home.palace .v74-flag{
+  position:absolute;
+  left:62px;top:-2px;width:4px;height:26px;background:#6e4d86;
+}
+.v74-home.luxury .v74-flag:after,
+.v74-home.palace .v74-flag:after{
+  content:"";
+  position:absolute;left:4px;top:0;width:24px;height:15px;
+  background:#f0c15b;
+  clip-path:polygon(0 0,100% 50%,0 100%);
+}
+.v74-home.palace .v74-main,
+.v74-home.palace .v74-tower{
+  background:linear-gradient(#e8d7a8,#c99d4c);
+  border-color:#9f7132;
+}
+.v74-home.palace .v74-tower:before{background:#9f7132}
+.v74-home.palace .v74-flag{background:#8b5e27}
+.v74-home.palace .v74-flag:after{background:#d25b82}
+
+/* Små detaljer */
+.v74-window{
+  position:absolute;
+  width:12px;height:16px;border-radius:50% 50% 3px 3px;
+  background:#8ee1df;
+  border:2px solid rgba(36,78,85,.45);
+  z-index:8;
+}
+.v74-window.w1{left:24px;bottom:37px}
+.v74-window.w2{right:24px;bottom:37px}
+
+
+/* =========================================================
+   v7.5 – handen ska bara komma vid klick PÅ bläckfisken
+   ========================================================= */
+
+/* Själva genomskinliga SVG-ytan ska inte räknas som bläckfisken.
+   Bara de målade formerna kan ta emot klick. */
+#octopus .octopus-svg{
+  pointer-events:none !important;
+}
+
+#octopus .octopus-svg path,
+#octopus .octopus-svg circle,
+#octopus .octopus-svg ellipse,
+#octopus .octopus-svg polygon,
+#octopus .octopus-svg rect{
+  pointer-events:visiblePainted !important;
+}
+
+/* Hatt/smycke behåller sina egna klickfunktioner. */
+#octopus #v66-hat,
+#octopus #v4-necklace-svg,
+#octopus .v66-hat{
+  pointer-events:auto !important;
+}
+
+
+/* =========================================================
+   v8.1 – klick går igenom tomrummet runt bläckfisken
+   ========================================================= */
+#octopus{
+  pointer-events:none !important;
+}
+#octopus .octopus-svg{
+  pointer-events:none !important;
+}
+#octopus .octopus-svg path,
+#octopus .octopus-svg circle,
+#octopus .octopus-svg ellipse,
+#octopus .octopus-svg polygon,
+#octopus .octopus-svg rect{
+  pointer-events:visiblePainted !important;
+}
+#octopus #v66-hat,
+#octopus .v66-hat,
+#octopus #v4-necklace-svg{
+  pointer-events:auto !important;
+}
+
+
+/* =========================================================
+   v8.2 – mer synlig och varierad magi
+   ========================================================= */
+
+#v82-magic-layer{
+  position:absolute;
+  inset:0;
+  z-index:1350;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.v82-spark{
+  position:absolute;
+  font-size:24px;
+  animation:v82Spark 1.8s ease-out forwards;
+}
+@keyframes v82Spark{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(0deg)}
+  20%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-110%) scale(1.4) rotate(220deg)}
+}
+
+.v82-bubble{
+  position:absolute;
+  bottom:-30px;
+  font-size:22px;
+  animation:v82Bubble 2.6s ease-in forwards;
+}
+@keyframes v82Bubble{
+  0%{opacity:0;transform:translateY(0) scale(.7)}
+  15%{opacity:1}
+  100%{opacity:0;transform:translateY(-420px) scale(1.25)}
+}
+
+.v82-fish{
+  position:absolute;
+  left:-70px;
+  font-size:34px;
+  animation:v82Fish 2.7s linear forwards;
+}
+@keyframes v82Fish{
+  from{transform:translateX(0)}
+  to{transform:translateX(980px)}
+}
+
+.v82-rainbow{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,85,180,.28),transparent 34%),
+    radial-gradient(circle at 75% 28%,rgba(62,220,218,.3),transparent 35%),
+    radial-gradient(circle at 50% 80%,rgba(255,211,76,.22),transparent 38%);
+  animation:v82Rainbow 2.3s ease-in-out forwards;
+}
+@keyframes v82Rainbow{
+  0%,100%{opacity:0}
+  18%,78%{opacity:1}
+}
+
+.v82-starfall{
+  position:absolute;
+  top:-35px;
+  font-size:25px;
+  animation:v82Starfall 2.2s linear forwards;
+}
+@keyframes v82Starfall{
+  to{transform:translateY(470px) rotate(540deg);opacity:.1}
+}
+
+#octopus.v82-magic-dance{
+  animation:v82MagicDance .34s ease-in-out 6 alternate;
+}
+@keyframes v82MagicDance{
+  from{rotate:-12deg;translate:0 0}
+  to{rotate:12deg;translate:0 -9px}
+}
+
+.v82-object-float{
+  animation:v82ObjectFloat .55s ease-in-out 3 alternate;
+}
+@keyframes v82ObjectFloat{
+  from{translate:0 0}
+  to{translate:0 -18px}
+}
+
+.v82-object-wiggle{
+  animation:v82ObjectWiggle .24s ease-in-out 7 alternate;
+}
+@keyframes v82ObjectWiggle{
+  from{rotate:-6deg}
+  to{rotate:6deg}
+}
+
+
+/* =========================================================
+   v8.3 – besökare utan vit bakgrund + klickbara omgivningssaker
+   ========================================================= */
+
+.v71-visitor{
+  background:transparent !important;
+  border:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  outline:none;
+  box-shadow:none !important;
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+.v71-visitor.friend{
+  border-radius:0 !important;
+}
+
+.v71-visitor.friend .octopus-svg{
+  pointer-events:none !important;
+}
+
+/* Små klickbara händelser i omgivningen */
+#v83-ambient-layer{
+  position:absolute;
+  inset:0;
+  z-index:610;
+  pointer-events:none;
+}
+
+.v83-ambient{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  pointer-events:auto;
+  border:0;
+  background:transparent;
+  padding:2px;
+  cursor:pointer;
+  font-size:36px;
+  filter:drop-shadow(0 3px 4px rgba(0,0,0,.17));
+  animation:v83Bob 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes v83Bob{
+  from{transform:translate(-50%,-50%) translateY(0) rotate(-3deg)}
+  to{transform:translate(-50%,-50%) translateY(-5px) rotate(3deg)}
+}
+
+.v83-ambient.active{
+  animation:v83Pop .34s ease-in-out 5 alternate;
+}
+
+@keyframes v83Pop{
+  from{transform:translate(-50%,-50%) scale(.92) rotate(-7deg)}
+  to{transform:translate(-50%,-50%) scale(1.18) rotate(7deg)}
+}
+
+.v83-mini-octo{
+  width:54px;
+  height:54px;
+  display:block;
+}
+
+
+/* =========================================================
+   v8.6 – gammal bläckfisk
+   ========================================================= */
+
+#octopus.v86-old{
+  filter:saturate(.72) brightness(.97);
+}
+
+#octopus.v86-old .octopus-svg{
+  opacity:.96;
+}
+
+
+/* =========================================================
+   v8.7 – liten direkt vid nytt spel + exakt klappklick
+   ========================================================= */
+
+/* Bläckfiskens osynliga knappyta ska aldrig fånga klick själv.
+   Vi träfftestar istället de målade SVG-formerna exakt i JavaScript. */
+#octopus,
+#octopus .octopus-svg,
+#octopus .octopus-svg *{
+  pointer-events:none !important;
+}
+
+/* Innan rätt tillväxtstorlek har applicerats: visa bebisstorlek.
+   Detta hindrar att den blinkar till stor först. */
+#game-screen:not([data-v87-growth-ready="1"]) #octopus{
+  transform:translate(-50%,-50%) scale(.42) !important;
+}
+
+
+/* =========================================================
+   v9.3 – snäckor utan vit knappbakgrund
+   ========================================================= */
+
+.v83-ambient,
+.v83-ambient:focus,
+.v83-ambient:active,
+.v68-mussel,
+.v68-mussel:focus,
+.v68-mussel:active{
+  appearance:none !important;
+  -webkit-appearance:none !important;
+  background:transparent !important;
+  background-color:transparent !important;
+  border:0 !important;
+  outline:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+}
+
+
+/* =========================================================
+   v9.4 – bläckfiskvännen rör sig och dansar mer efter klick
+   ========================================================= */
+
+.v71-visitor.friend.v94-friend-dance{
+  animation:v94FriendDance .34s ease-in-out infinite alternate !important;
+}
+
+@keyframes v94FriendDance{
+  0%{
+    transform:translate(-50%,-50%) rotate(-12deg) translateY(2px) scale(.96);
+  }
+  50%{
+    transform:translate(-50%,-50%) rotate(7deg) translateY(-10px) scale(1.06);
+  }
+  100%{
+    transform:translate(-50%,-50%) rotate(13deg) translateY(-3px) scale(1);
+  }
+}
+
+.v71-visitor.friend.v94-friend-spin{
+  animation:v94FriendSpin .72s ease-in-out 2;
+}
+
+@keyframes v94FriendSpin{
+  0%{transform:translate(-50%,-50%) rotate(0deg)}
+  50%{transform:translate(-50%,-50%) rotate(180deg) scale(1.08)}
+  100%{transform:translate(-50%,-50%) rotate(360deg)}
+}

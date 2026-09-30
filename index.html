@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#075f67" />
+  <title>Tidvattenpölen</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./style.css?v=9.0" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="start-screen" class="screen start-card">
+      <div class="decor decor-shell">🐚</div><div class="decor decor-starfish">★</div>
+      <p class="kicker">Tidvattenpölen</p><h1>Forma din egen bläckfisk</h1><p>Nu ska vi ta reda på vem du är.</p>
+      <button id="start-button" class="primary-button" type="button">Börja</button>
+    </section>
+
+    <section id="quiz-screen" class="screen quiz-card" hidden>
+      <div class="quiz-top"><p class="kicker">Personlighetstest</p><p id="quiz-progress" class="pill">Fråga 1 av 5</p></div>
+      <div id="quiz-form"><h1 id="quiz-question" tabindex="-1"></h1><p class="muted">Välj det svar som passar dig bäst.</p><div id="quiz-options" class="quiz-options"></div></div>
+      <div id="quiz-result" hidden>
+        <p class="kicker">Din bläckfisk</p><h1 id="personality-title" tabindex="-1"></h1><p id="personality-description"></p>
+        <div class="name-box"><label for="octopus-name">Vad ska din bläckfisk heta?</label><input id="octopus-name" maxlength="18" placeholder="Skriv ett namn..." /><button id="create-pet-button" class="primary-button" type="button">Möt min bläckfisk</button><p id="name-error" class="form-error"></p></div>
+      </div>
+    </section>
+
+    <section id="game-screen" class="game-screen" hidden>
+      <header class="game-header"><div><p class="kicker">Ditt akvarium</p><h1><span id="pet-name-heading">Din bläckfisk</span> <span id="stage-badge" class="stage-badge">bebis</span></h1><p class="profile-line">Född <span id="birthday-text"></span> · <span id="age-text"></span></p></div><div class="header-actions"><button id="quests-button" class="secondary-button" type="button">Uppdrag <span id="quest-badge" class="count-badge">0</span></button><button id="inventory-button" class="secondary-button" type="button">Bygg om</button>
+          <button id="new-pet-button" class="secondary-button reset-button" type="button">Ny bläckfisk</button></div></header>
+
+      <section class="tank-wrap">
+        <div id="tank" class="tank day">
+          <div class="water-light light-one"></div><div class="water-light light-two"></div><div class="back-rock rock-a"></div><div class="back-rock rock-b"></div>
+          <div class="plant plant-a"><i></i><i></i><i></i></div><div class="plant plant-b"><i></i><i></i><i></i></div><div class="sand-bed"></div>
+          <div id="decor-layer" class="decor-layer"></div><div id="food-layer" class="food-layer"></div><div id="hand" class="hand">🖐️</div>
+          <button id="octopus" class="octopus-wrap" type="button" aria-label="Klappa din bläckfisk">
+            <svg class="octopus-svg" viewBox="0 0 270 230" role="img" aria-label="En liten bläckfisk">
+              <defs><radialGradient id="skinGrad" cx="35%" cy="28%" r="80%"><stop offset="0%" stop-color="#f8a59b"/><stop offset="48%" stop-color="#d96375"/><stop offset="100%" stop-color="#8f3d62"/></radialGradient><linearGradient id="armGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#dc6c79"/><stop offset="100%" stop-color="#8c3e62"/></linearGradient></defs>
+              <path class="arm arm1" d="M105 138 C75 145,50 164,44 190 C39 211,59 218,70 200 C83 180,90 174,111 171" fill="none" stroke="url(#armGrad)" stroke-width="24" stroke-linecap="round"/>
+              <path class="arm arm2" d="M118 147 C96 166,91 191,100 208 C108 223,128 214,125 197 C122 183,127 175,137 165" fill="none" stroke="url(#armGrad)" stroke-width="22" stroke-linecap="round"/>
+              <path class="arm arm3" d="M146 146 C159 165,162 190,153 207 C145 222,126 214,131 196 C135 182,132 175,128 164" fill="none" stroke="url(#armGrad)" stroke-width="22" stroke-linecap="round"/>
+              <path class="arm arm4" d="M159 137 C190 144,217 162,224 188 C229 209,210 218,198 199 C186 180,179 173,158 170" fill="none" stroke="url(#armGrad)" stroke-width="24" stroke-linecap="round"/>
+              <path class="arm arm5" d="M93 146 C71 161,63 181,67 201" fill="none" stroke="url(#armGrad)" stroke-width="18" stroke-linecap="round"/><path class="arm arm6" d="M174 146 C196 160,205 179,202 198" fill="none" stroke="url(#armGrad)" stroke-width="18" stroke-linecap="round"/>
+              <ellipse class="head" cx="134" cy="104" rx="70" ry="69" fill="url(#skinGrad)"/><ellipse cx="108" cy="102" rx="12" ry="15" fill="#1f2530"/><ellipse cx="160" cy="102" rx="12" ry="15" fill="#1f2530"/><circle cx="104" cy="97" r="3.5" fill="#fff"/><circle cx="156" cy="97" r="3.5" fill="#fff"/><path class="mouth" d="M119 128 Q134 138 149 128" fill="none" stroke="#6b2d4d" stroke-width="4" stroke-linecap="round"/>
+            </svg><span id="thought-bubble" class="thought-bubble" hidden></span>
+          </button>
+          <div id="event-toast" class="event-toast"></div>
+        </div>
+        <div class="quick-actions"><button id="feed-button" class="action-card" type="button"><span class="action-icon">🦐</span><span><strong>Mata</strong><small>släpp ner levande mat</small></span></button><button id="pet-button" class="action-card" type="button"><span class="action-icon">🖐️</span><span><strong>Klappa</strong><small>låt handen komma nära</small></span></button><button id="play-button" class="action-card" type="button"><span class="action-icon">🫧</span><span><strong>Lek</strong><small>locka fram lekfullheten</small></span></button><button id="rest-button" class="action-card" type="button"><span class="action-icon">🌙</span><span><strong>Vila</strong><small>låt den hitta lugn</small></span></button></div>
+      </section>
+
+      <section class="needs-card"><div class="needs-header"><div><p class="kicker">Hur mår <span id="pet-name-needs">den</span>?</p><h2 id="mood-label">Nyfiken och pigg</h2></div><span id="mood-face" class="mood-face">◡</span></div><div id="needs-grid" class="needs-grid"></div></section>
+      <section class="story-card"><p class="kicker">Vad händer?</p><p id="story-text">Din lilla bläckfisk tittar försiktigt ut över sitt nya hem.</p></section>
+    </section>
+  </main>
+
+  <dialog id="inventory-dialog" class="game-dialog"><form method="dialog"><div class="dialog-heading"><div><p class="kicker">Bygg om</p><h2>Upplåsta saker</h2></div><button class="close-button" value="cancel">×</button></div><p class="muted">Lägg in upplåsta leksaker, burkar och hem. Uppgraderingar ersätter den gamla versionen.</p><div id="inventory-grid" class="inventory-grid"></div></form></dialog>
+  <dialog id="quests-dialog" class="game-dialog"><form method="dialog"><div class="dialog-heading"><div><p class="kicker">Små mål</p><h2>Uppdrag</h2></div><button class="close-button" value="cancel">×</button></div><div id="quests-list" class="quests-list"></div></form></dialog>
+  <dialog id="continue-dialog" class="continue-dialog"><form method="dialog"><p class="kicker">Fem minuter har gått</p><h2>Vill du fortsätta?</h2><p>Din bläckfisk fortsätter leva även om du tar en paus.</p><div class="dialog-buttons"><button class="secondary-button" value="close">Ta en paus</button><button class="primary-button" value="continue">Fortsätt spela</button></div></form></dialog>
+  <script src="./script.js?v=9.0"></script>
+  <script>
+    if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
